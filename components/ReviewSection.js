@@ -37,7 +37,7 @@ export default function ReviewSection() {
                     <FaStar key={index} />
                   ))}
               </div>
-              <p className="text-gray-800 italic">"{review.text}"</p>
+              <p className="text-gray-800 italic">{review.text}</p>
               <p className="mt-3 font-semibold text-gray-900">— {review.name}</p>
             </div>
           ))}
