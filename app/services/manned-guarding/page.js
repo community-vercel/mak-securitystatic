@@ -188,7 +188,7 @@ const TestimonialSlider = () => {
               </div>
               
               <p className="text-xl text-gray-700 italic mb-8 text-center leading-relaxed">
-                "{testimonials[current].quote}"
+                {testimonials[current].quote}
               </p>
               
               <div className="text-center">
