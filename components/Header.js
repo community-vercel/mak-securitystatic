@@ -1,62 +1,73 @@
-"use client";
+'use client';
+ 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
-
+import { FaBars, FaTimes } from 'react-icons/fa';
+ 
+const navLinks = [
+  { name: 'Home', href: '/' },
+  { name: 'Services', href: '/services' },
+  { name: 'About Us', href: '/about' },
+  { name: 'Careers', href: '/careers' },
+  { name: 'Contact', href: '/contact' },
+];
+ 
 export default function Header() {
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-
-  const services = [
-    'Manned Guarding',
-    'Security Guards',
-    'Key Holding Services',
-    'CCTV Security',
-    'Event Security',
-    'Mobile Security',
-    'Facility Management',
-    'Car Park Management',
-    'Concrete Block Hire',
-    'Court Enforcement',
-  ];
-
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+ 
   return (
-    <header className="bg-gradient-to-r from-blue-900 to-blue-800 text-white p-5 shadow-md">
-      <nav className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="text-3xl font-extrabold tracking-tight">
-          MAK Security
+    <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-3 md:py-4">
+        {/* Logo */}
+        <Link href="/" className="flex items-center space-x-3">
+          <Image
+            src="/Mak-Security-Logo-300x60.png"
+            alt="MAK Logo"
+            width={140}
+            height={60}
+            className="object-contain"
+          />
         </Link>
-        <ul className="flex space-x-8 items-center text-lg">
-          <li><Link href="/" className="hover:text-blue-200 transition-colors duration-200">Home</Link></li>
-          <li><Link href="/about" className="hover:text-blue-200 transition-colors duration-200">About</Link></li>
-          <li 
-            className="relative group"
-            onMouseEnter={() => setIsServicesOpen(true)}
-            onMouseLeave={() => setIsServicesOpen(false)}
-          >
-            <Link href="/services" className="hover:text-blue-200 transition-colors duration-200">
-              <span className="group-hover:hidden">Services</span>
-              <span className="hidden group-hover:inline">Services</span>
+ 
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center space-x-6">
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className="text-sm font-medium text-gray-800 hover:text-red-600 transition-colors duration-200"
+            >
+              {link.name}
             </Link>
-            {isServicesOpen && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 w-96 bg-white text-gray-800 shadow-xl rounded-xl p-6 z-10 transform transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100">
-                <div className="text-center font-semibold text-xl text-blue-900 mb-4 border-b border-gray-200 pb-2">Our Services</div>
-                <div className="grid grid-cols-2 gap-4">
-                  {services.map((service, index) => (
-                    <Link
-                      key={index}
-                      href={`/services/${service.toLowerCase().replace(/\s+/g, '-')}`}
-                      className="text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 rounded-md px-2 py-1"
-                    >
-                      {service}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )}
-          </li>
-          <li><Link href="/blog" className="hover:text-blue-200 transition-colors duration-200">Blog</Link></li>
-          <li><Link href="/contact" className="hover:text-blue-200 transition-colors duration-200">Contact</Link></li>
-        </ul>
-      </nav>
+          ))}
+        </nav>
+ 
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
+          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-gray-800">
+            {mobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+          </button>
+        </div>
+      </div>
+ 
+      {/* Mobile Dropdown Menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-white shadow-inner px-4 py-4 space-y-4">
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className="block text-base font-medium text-gray-800 hover:text-red-500 transition"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {link.name}
+            </Link>
+          ))}
+        </div>
+      )}
     </header>
   );
 }
+ 
+ 
