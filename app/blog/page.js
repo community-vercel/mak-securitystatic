@@ -1,7 +1,6 @@
  
 import { promises as fs } from 'fs';
 import path from 'path';
-import matter from 'gray-matter';
 
 export default async function Blog() {
   const postsDirectory = path.join(process.cwd(), 'src/data/blog');
