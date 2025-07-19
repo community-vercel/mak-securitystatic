@@ -17,25 +17,25 @@ import BlogSection from "@/components/logSection";
 import FaqSection from "@/components/FaqSection";
 
 export default function Home() {
-  return (
-    <>
-      <HeroBanner />
+    return (
+        <>
+            <HeroBanner />
             <SIAApprovalBadge />
 
-      <ContactStrip />
-      <AboutMak />
-      <StepsSection />
-      <Benefits />
-      <Services />
-      <SIAExplanation />
+            <ContactStrip />
+            <AboutMak />
+            <StepsSection />
+            <Benefits />
+            <Services />
+            <SIAExplanation />
             <BlogSection />
 
-      <DirectorMessage />
-      <ReviewSection />
-      <FaqSection />
-      <Accreditations />
-      <Testimonials />
-      <SocialMedia />
-    </>
-  );
+            <DirectorMessage />
+            <ReviewSection />
+            <FaqSection />
+            <Accreditations />
+            <Testimonials />
+            <SocialMedia />
+        </>
+    );
 }

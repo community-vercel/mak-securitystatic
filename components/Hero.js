@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -9,7 +9,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Link from 'next/link';
 import './styles.css'; // Adjust the path as needed
-
 
 const slides = [
   {
@@ -48,6 +47,12 @@ export default function Hero() {
     enquiry: '',
   });
   const [charCount, setCharCount] = useState(0);
+  const [isClient, setIsClient] = useState(false); // Track client-side rendering
+
+  // Set isClient to true after component mounts on the client
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const stopAutoplay = () => {
     if (swiperRef.current?.swiper?.autoplay) {
@@ -69,7 +74,7 @@ export default function Hero() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData); // Debug form submission
+    console.log('Form submitted:', formData);
     setFormData({
       name: '',
       phone: '',
@@ -87,13 +92,13 @@ export default function Hero() {
         modules={[Autoplay, Navigation, Pagination]}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
-          console.log('Swiper initialized:', swiper); // Debug Swiper initialization
+          console.log('Swiper initialized:', swiper);
         }}
         navigation
         pagination={{ clickable: true }}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         loop
-        allowTouchMove={!document.activeElement?.closest('form')}
+        allowTouchMove={isClient ? !document.activeElement?.closest('form') : true} // Only access document on client
         className="w-full h-full"
       >
         {slides.map((slide, idx) => (
@@ -106,20 +111,20 @@ export default function Hero() {
                 style={{ objectFit: 'cover' }}
                 className="absolute top-0 left-0 w-full h-full z-0"
                 priority={idx === 0}
-                onError={() => console.error(`Failed to load image: ${slide.src}`)} // Debug image loading
+                onError={() => console.error(`Failed to load image: ${slide.src}`)}
               />
               {/* Overlay */}
-              <div className="absolute inset-0  z-5"></div>
+              <div className="absolute inset-0 z-5"></div>
               {/* Slide Content */}
               <div className="absolute inset-0 z-10 max-w-6xl flex flex-col items-center justify-center text-center text-white px-4 md:px-8">
-                <h1 className="text-3xl md:text-5xl font-bold mb-4 drop-shadow-lg  px-4 py-2 rounded">
+                <h1 className="text-3xl md:text-5xl font-bold mb-4 drop-shadow-lg px-4 py-2 rounded">
                   {slide.title}
                 </h1>
-                <p className="text-lg md:text-xl mb-6 max-w-2xl drop-shadow-md  px-4 py-2 rounded">
+                <p className="text-lg md:text-xl mb-6 max-w-2xl drop-shadow-md px-4 py-2 rounded">
                   {slide.description}
                 </p>
                 <Link href={slide.buttonLink}>
-                  <button className="bg-[#ff0600] hover:from-gray-800 text-white py-2 px-6 rounded-md text-sm font-semibold transition">
+                  <button className="bg-[#ff0600] hover:bg-gray-800 text-white py-2 px-6 rounded-md text-sm font-semibold transition">
                     {slide.buttonText}
                   </button>
                 </Link>
@@ -197,7 +202,7 @@ export default function Hero() {
           </div>
           <button
             type="submit"
-            className="w-full bg-[#ff0600] hover:hover:bg-gray-800 text-white py-2 rounded-md text-sm font-semibold transition"
+            className="w-full bg-[#ff0600] hover:bg-gray-800 text-white py-2 rounded-md text-sm font-semibold transition"
           >
             Submit Request
           </button>
