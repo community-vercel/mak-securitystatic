@@ -17,7 +17,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
  
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-[#eeeeee] shadow-md">
+    <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-3 md:py-4">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-3">

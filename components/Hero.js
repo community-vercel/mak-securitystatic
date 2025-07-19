@@ -1,14 +1,14 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
+import { useRef, useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import Link from 'next/link';
 import './styles.css'; // Adjust the path as needed
-
 
 const slides = [
   {
@@ -38,48 +38,176 @@ const slides = [
 ];
 
 export default function Hero() {
+  const swiperRef = useRef(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    company: '',
+    enquiry: '',
+  });
+  const [charCount, setCharCount] = useState(0);
+  const [isClient, setIsClient] = useState(false); // Track client-side rendering
+
+  // Set isClient to true after component mounts on the client
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  const stopAutoplay = () => {
+    if (swiperRef.current?.swiper?.autoplay) {
+      swiperRef.current.swiper.autoplay.stop();
+    }
+  };
+
+  const startAutoplay = () => {
+    if (swiperRef.current?.swiper?.autoplay) {
+      swiperRef.current.swiper.autoplay.start();
+    }
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    if (name === 'enquiry') setCharCount(value.length);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+    setFormData({
+      name: '',
+      phone: '',
+      email: '',
+      company: '',
+      enquiry: '',
+    });
+    setCharCount(0);
+  };
+
   return (
-    <section className="relative h-[85vh] w-full overflow-hidden text-white">
+    <section className="relative w-full h-[90vh] overflow-hidden">
+      {/* Swiper Section */}
       <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
+        modules={[Autoplay, Navigation, Pagination]}
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+          console.log('Swiper initialized:', swiper);
+        }}
         navigation
         pagination={{ clickable: true }}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         loop
-        className="absolute inset-0 w-full h-full"
+        allowTouchMove={isClient ? !document.activeElement?.closest('form') : true} // Only access document on client
+        className="w-full h-full"
       >
-        {slides.map((slide, index) => (
-          <SwiperSlide key={index}>
+        {slides.map((slide, idx) => (
+          <SwiperSlide key={idx}>
             <div className="relative w-full h-full">
-              {/* Background Image */}
               <Image
                 src={slide.src}
                 alt={slide.alt}
                 fill
-                className="object-cover"
-                priority={index === 0}
+                style={{ objectFit: 'cover' }}
+                className="absolute top-0 left-0 w-full h-full z-0"
+                priority={idx === 0}
+                onError={() => console.error(`Failed to load image: ${slide.src}`)}
               />
-              <div className="absolute inset-0 bg-black/60" />
-
-              {/* Slide Text Content */}
-              <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-4">
-                <h1 className="text-4xl md:text-5xl font-bold leading-tight drop-shadow-md">
+              {/* Overlay */}
+              <div className="absolute inset-0 z-5"></div>
+              {/* Slide Content */}
+              <div className="absolute inset-0 z-10 max-w-6xl flex flex-col items-center justify-center text-center text-white px-4 md:px-8">
+                <h1 className="text-3xl md:text-5xl font-bold mb-4 drop-shadow-lg px-4 py-2 rounded">
                   {slide.title}
                 </h1>
-                <p className="mt-4 text-lg md:text-xl drop-shadow-md">
+                <p className="text-lg md:text-xl mb-6 max-w-2xl drop-shadow-md px-4 py-2 rounded">
                   {slide.description}
                 </p>
-                <Link
-                  href={slide.buttonLink}
-                  className="mt-6 inline-block bg-[#ff1a14] hover:bg-black text-white px-6 py-3 rounded-lg text-sm font-semibold transition"
-                >
-                  {slide.buttonText}
+                <Link href={slide.buttonLink}>
+                  <button className="bg-[#ff0600] hover:bg-gray-800 text-white py-2 px-6 rounded-md text-sm font-semibold transition">
+                    {slide.buttonText}
+                  </button>
                 </Link>
               </div>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
+
+      {/* Quote Form */}
+      <div className="absolute top-12 right-4 md:top-16 md:right-12 z-10 bg-white rounded-lg shadow-2xl w-full max-w-md p-6 text-black">
+        <h2 className="text-xl font-semibold text-center mb-1">Request a Quote</h2>
+        <p className="text-sm text-center italic text-red-600 mb-4">Fill in your information below</p>
+
+        <form className="space-y-3" onSubmit={handleSubmit}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <input
+              type="text"
+              name="name"
+              placeholder="NAME*"
+              className="border px-3 py-2 rounded-md text-sm placeholder-gray-500"
+              value={formData.name}
+              onChange={handleInputChange}
+              required
+              onFocus={stopAutoplay}
+              onBlur={startAutoplay}
+            />
+            <input
+              type="text"
+              name="phone"
+              placeholder="PHONE NUMBER*"
+              className="border px-3 py-2 rounded-md text-sm placeholder-gray-500"
+              value={formData.phone}
+              onChange={handleInputChange}
+              required
+              onFocus={stopAutoplay}
+              onBlur={startAutoplay}
+            />
+          </div>
+          <input
+            type="email"
+            name="email"
+            placeholder="EMAIL ADDRESS*"
+            className="w-full border px-3 py-2 rounded-md text-sm placeholder-gray-500"
+            value={formData.email}
+            onChange={handleInputChange}
+            required
+            onFocus={stopAutoplay}
+            onBlur={startAutoplay}
+          />
+          <input
+            type="text"
+            name="company"
+            placeholder="COMPANY NAME IF APPLICABLE"
+            className="w-full border px-3 py-2 rounded-md text-sm placeholder-gray-500"
+            value={formData.company}
+            onChange={handleInputChange}
+            onFocus={stopAutoplay}
+            onBlur={startAutoplay}
+          />
+          <div>
+            <textarea
+              name="enquiry"
+              placeholder="YOUR ENQUIRY*"
+              rows={4}
+              maxLength={1500}
+              className="w-full border px-3 py-2 rounded-md text-sm placeholder-gray-500 resize-none"
+              value={formData.enquiry}
+              onChange={handleInputChange}
+              required
+              onFocus={stopAutoplay}
+              onBlur={startAutoplay}
+            />
+            <p className="text-xs text-gray-500 text-right">{charCount} of 1500 max characters.</p>
+          </div>
+          <button
+            type="submit"
+            className="w-full bg-[#ff0600] hover:bg-gray-800 text-white py-2 rounded-md text-sm font-semibold transition"
+          >
+            Submit Request
+          </button>
+        </form>
+      </div>
     </section>
   );
 }
