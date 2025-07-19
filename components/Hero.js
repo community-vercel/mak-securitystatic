@@ -10,6 +10,7 @@ import 'swiper/css/pagination';
 import Link from 'next/link';
 import './styles.css'; // Adjust the path as needed
 
+
 const slides = [
   {
     src: '/Mak_Security_Home.jpg',
