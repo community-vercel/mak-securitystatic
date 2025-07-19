@@ -13,6 +13,8 @@ import SIAApprovalBadge from "@/components/SIAApprovalBadge";
 import SIAExplanation from "@/components/SIAExplanation";
 import ReviewSection from "@/components/ReviewSection";
 import Accreditations from "@/components/Accreditations";
+import BlogSection from "@/components/logSection";
+import FaqSection from "@/components/FaqSection";
 
 export default function Home() {
   return (
@@ -26,8 +28,11 @@ export default function Home() {
       <Benefits />
       <Services />
       <SIAExplanation />
+            <BlogSection />
+
       <DirectorMessage />
       <ReviewSection />
+      <FaqSection />
       <Accreditations />
       <Testimonials />
       <SocialMedia />
