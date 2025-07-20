@@ -406,37 +406,37 @@ export default function Services() {
     {
       title: 'Manned Guarding',
       subtitle: 'MANNED GUARDING',
-      image: '/services/manned-guarding.jpeg',
+      image: '/services/manned-guarding.png',
     },
     {
       title: 'Event Security',
       subtitle: 'EVENT SECURITY',
-      image: '/services/event-security.jpeg',
+      image: '/services/event-security.png',
     },
     {
       title: 'Key Holding',
       subtitle: 'KEY HOLDING & ALARM RESPONSE',
-      image: '/services/key-holding.jpeg',
+      image: '/services/key-holding.png',
     },
     {
       title: 'Facility Management',
       subtitle: 'FACILITY MANAGEMENT',
-      image: '/services/facility-management.jpeg',
+      image: '/services/facility-management.png',
     },
     {
       title: 'Car Park Management',
       subtitle: 'CAR PARK MANAGEMENT',
-      image: '/services/car-park-management.jpeg',
+      image: '/services/car-park-management.png',
     },
     {
       title: 'Concrete Block Hire',
       subtitle: 'CONCRETE BLOCK HIRE',
-      image: '/services/Concrete_Block-Hire.jpeg',
+      image: '/services/Concrete_Block-Hire.png',
     },
     {
       title: 'CCTV',
       subtitle: 'CCTV',
-      image: '/services/cctv.jpeg',
+      image: '/services/cctv.png',
     },
   ];
 
