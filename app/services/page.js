@@ -211,7 +211,7 @@ const TestimonialSlider = ({ testimonials }) => {
           transition={{ duration: 0.5 }}
           className="bg-white p-23 rounded-xl shadow-lg max-w-3xl mx-auto text-center"
         >
-          <p className="text-gray-600 italic mb-4 text-lg">"{testimonials[current].quote}"</p>
+          <p className="text-gray-600 italic mb-4 text-lg">{testimonials[current].quote}</p>
           <p className="text-[#374B5B] font-semibold">{testimonials[current].author}</p>
         </motion.div>
       </AnimatePresence>
