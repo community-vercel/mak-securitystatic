@@ -184,7 +184,7 @@ export default function ContactPage() {
       <section className="py-12 text-center bg-gray-100">
         <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-md">
           <p className="text-gray-700 italic">
-            "Service is excellent, happy with all aspects of service." — <strong>Patrick</strong>
+  &quot;Service is excellent, happy with all aspects of service.&quot; — <strong>Patrick</strong>
           </p>
         </div>
       </section>
