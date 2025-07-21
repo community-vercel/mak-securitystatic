@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8 border-b border-gray-700 pb-10">
         {/* Column 1: Get in Touch */}
         <div>
-          <h4 className="text-lg font-bold mb-3 border-b border-red-600 pb-1">Get In Touch</h4>
+          <h5 className="text-lg font-bold mb-3 border-b border-red-600 pb-1">Get In Touch</h5>
           <p className="text-sm mb-1 font-semibold"><FaMapMarkerAlt className="inline mr-2" />MAK Security Head Office</p>
           <p className="text-sm ml-5">Manor House</p>
           <p className="text-sm ml-5">Manor Street</p>
