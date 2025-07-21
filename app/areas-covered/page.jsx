@@ -5,16 +5,10 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { MapPinIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
-import ContactForm from '@/components/ContactForm'; // Adjusted import to match naming convention
+import ContactForm from '@/components/ContactForm';
 import TestimonialSlider from '@/components/TestimonalSlider';
-const getImageFilename = (name) =>
-  name
-    .toLowerCase()
-    .replace(/[^a-z0-9]/g, '-') // replace non-alphanumeric with -
-    .replace(/-+/g, '-')        // collapse multiple dashes
-    .replace(/^-|-$/g, '');  
-    
-    // Area Card Component
+
+// Area Card Component
 const AreaCard = ({ area, index }) => {
   return (
     <motion.div
@@ -25,12 +19,12 @@ const AreaCard = ({ area, index }) => {
       className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-6 text-center"
     >
       <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
-       <Image
-  src={`/services/${getImageFilename(area.name)}.jpg`}
-  alt={`${area.name} Security Services`}
-  fill
-  className="object-cover"
-/>
+        <Image
+          src={area.image} // Use static image path from area object
+          alt={`${area.name} Security Services`}
+          fill
+          className="object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 to-transparent"></div>
       </div>
       <h3 className="text-xl font-semibold text-gray-900 mb-2">{area.name}</h3>
@@ -95,30 +89,35 @@ export default function AreasCoveredPage() {
       href: '/areas-covered/manchester',
       description: 'Comprehensive security solutions across Manchester, including manned guarding, CCTV, key holding, and court enforcement for areas like Blackley, Hulme, and Wythenshawe.',
       subAreas: 'Blackley, Cheetham Hill, Chorlton-cum-Hardy, Didsbury, Hulme, Moss Side, Wythenshawe, Longsight',
+      image: '/services/manchester.jpg', // Static image path
     },
     {
       name: 'Merseyside',
       href: '/areas-covered/merseyside',
       description: 'Comprehensive security for Merseyside, including Liverpool, Halton, Knowsley, Sefton, and Wirral, with event security and court enforcement.',
       subAreas: 'Liverpool, Halton, Knowsley, Sefton, Wirral, Wallasey, Heswall',
+      image: '/services/merseyside.jpg', // Static image path
     },
     {
       name: 'Lancashire',
       href: '/areas-covered/lancashire',
       description: 'Offering a full range of security solutions in Lancashire, including Blackburn, Blackpool, Burnley, and Chorley, with mobile patrols and CCTV.',
       subAreas: 'Blackburn, Blackpool, Burnley, Chorley, Lancaster, Ormskirk',
+      image: '/services/lancashire.jpg', // Static image path
     },
     {
       name: 'Cheshire',
       href: '/areas-covered/cheshire',
       description: 'Delivering advanced CCTV, facility management, and court enforcement solutions for businesses in Cheshire, covering areas like Chester, Warrington, and Crewe.',
       subAreas: 'Chester, Warrington, Crewe, Macclesfield, Nantwich',
+      image: '/services/cheshire.jpg', // Static image path
     },
     {
       name: 'Staffordshire',
       href: '/areas-covered/staffordshire',
       description: 'Providing professional security services, including manned guarding and mobile patrols, across Staffordshire, covering areas like Stafford, Stoke-on-Trent, and Lichfield.',
       subAreas: 'Stafford, Stoke-on-Trent, Lichfield, Tamworth, Cannock',
+      image: '/services/staffordshire.jpg', // Static image path
     },
   ];
 
@@ -156,7 +155,7 @@ export default function AreasCoveredPage() {
           className="relative h-[400px] w-full mb-12 rounded-3xl shadow-2xl overflow-hidden"
         >
           <Image
-            src="/services/images.jpg" // Updated to generic image path
+            src="/services/images.jpg"
             alt="MAK Security Areas Covered"
             fill
             className="object-cover"
@@ -204,7 +203,7 @@ export default function AreasCoveredPage() {
         >
           <div className="absolute inset-0 z-0">
             <Image
-              src="/services/Facility_Management-Company.jpg" // Updated to generic image path
+              src="/services/Facility_Management-Company.jpg"
               alt="MAK Security service process"
               width={1200}
               height={800}
@@ -312,7 +311,7 @@ export default function AreasCoveredPage() {
               >
                 <div className="relative group rounded-2xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/services/Staffordshire.jpg" // Updated to generic image path
+                    src="/services/staffordshire.jpg"
                     alt="MAK Security team"
                     width={400}
                     height={400}
@@ -382,7 +381,7 @@ export default function AreasCoveredPage() {
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
               {[
-              { name: "ICO", image: "/services/ICO-logo.png" },
+                { name: "ICO", image: "/services/ICO-logo.png" },
                 { name: "SIA", image: "/services/SIA-Logo.png" },
                 { name: "ISOQAR", image: "/services/ISOQAR-Logo.png" },
                 { name: "NASDU", image: "/services/NASDU-logo.png" },
@@ -453,35 +452,6 @@ export default function AreasCoveredPage() {
             </motion.div>
           )}
         </AnimatePresence>
-
-        {/* Optional Interactive Map Section (Commented Out) */}
-        {/*
-        <section className="py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Find Us Near You</h2>
-            <div className="w-24 h-1 bg-red-500 mx-auto"></div>
-          </motion.div>
-          <div className="relative h-[400px] w-full rounded-xl overflow-hidden shadow-lg">
-            <Image
-              src="/images/uk-map.jpg" // Updated to generic image path
-              alt="MAK Security UK Coverage Map"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <p className="text-white text-lg font-semibold bg-black/50 py-2 px-4 rounded">
-                Interactive map coming soon. Contact us for coverage in your area!
-              </p>
-            </div>
-          </div>
-        </section>
-        */}
       </div>
     </section>
   );
