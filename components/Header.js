@@ -90,10 +90,10 @@ const navLinks = [
       { name: 'Chester', href: '/areas-covered/chester' },
     ],
   },
-  { name: 'About Us', href: '/about-us' },
+  { name: 'About Us', href: '/about' },
   { name: 'News', href: '/news' },
   { name: 'Careers', href: '/careers' },
-  { name: 'Contact', href: '/contact-us' },
+  { name: 'Contact', href: '/contact' },
 ];
 
 export default function Header() {
