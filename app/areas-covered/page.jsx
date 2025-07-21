@@ -7,8 +7,14 @@ import { useState, useEffect } from 'react';
 import { MapPinIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
 import ContactForm from '@/components/ContactForm'; // Adjusted import to match naming convention
 import TestimonialSlider from '@/components/TestimonalSlider';
-TestimonialSlider
-// Area Card Component
+const getImageFilename = (name) =>
+  name
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, '-') // replace non-alphanumeric with -
+    .replace(/-+/g, '-')        // collapse multiple dashes
+    .replace(/^-|-$/g, '');  
+    
+    // Area Card Component
 const AreaCard = ({ area, index }) => {
   return (
     <motion.div
@@ -19,12 +25,12 @@ const AreaCard = ({ area, index }) => {
       className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-6 text-center"
     >
       <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
-        <Image
-          src={`/services/${area.name.replace(/\s+/g, '-').toLowerCase()}.jpg`} // Updated path to match convention
-          alt={`${area.name} Security Services`}
-          fill
-          className="object-cover"
-        />
+       <Image
+  src={`/services/${getImageFilename(area.name)}.jpg`}
+  alt={`${area.name} Security Services`}
+  fill
+  className="object-cover"
+/>
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 to-transparent"></div>
       </div>
       <h3 className="text-xl font-semibold text-gray-900 mb-2">{area.name}</h3>
