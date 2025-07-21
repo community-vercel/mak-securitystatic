@@ -19,7 +19,7 @@ const AreaCard = ({ area, index }) => {
       className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-6 text-center"
     >
       <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
-        <Image
+        <img
           src={area.image} // Use static image path from area object
           alt={`${area.name} Security Services`}
           fill
