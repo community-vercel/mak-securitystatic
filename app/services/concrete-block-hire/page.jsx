@@ -4,8 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ShieldCheckIcon,
-  BuildingOfficeIcon,
-  ClockIcon,
+  CubeIcon,
   CheckCircleIcon,
 } from "@heroicons/react/24/outline";
 import ContactForm from "@/components/contactus";
@@ -44,7 +43,7 @@ const ServiceItem = ({ service, index }) => {
 };
 
 // Main Component
-export default function FacilityManagement() {
+export default function ConcreteBlockHire() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -73,57 +72,47 @@ export default function FacilityManagement() {
   }, []);
 
   const services = [
-    "Office Cleaning",
-    "Window Cleaning",
-    "Carpet Cleaning",
-    "Social Housing Cleaning",
-    "Industrial Cleaning",
-    "Drain Cleaning",
-    "Daytime Cleaning",
-    "Jet Washing",
-    "Graffiti Removal",
-    "General Cleaning",
-    "Leisure Cleaning",
-    "Retail Cleaning",
-    "Kitchen Cleaning",
-    "IT Equipment Cleaning",
-    "Washroom Management",
-    "Washroom Hygiene",
-    "Washroom Products",
-    "Property Maintenance",
-    "Grounds Maintenance",
+    "Concrete Block Hire for Security",
+    "Traffic Management Solutions",
+    "Flood Defense Barriers",
+    "Silage Pits and Waste Bays",
+    "Manned Guarding Services",
+    "Vacant Property Guarding",
+    "Court Enforcement Support",
+    "Concierge and Receptionist Services",
+    "Periodic Void Property Inspections",
   ];
 
   const benefits = [
-    "Top-class security services",
-    "Dedicated account managers",
-    "24 Hour Control Room facility",
-    "Latest GPS tracking facility",
-    "Rapid response time",
-    "Same day setup",
-    "Real-time incident reports",
-    "Around the clock service",
+    "Cheapest short-term solution from £3 per week",
+    "Hassle-free hire with nationwide delivery",
+    "Large variety of shapes and sizes",
+    "Long-term hire discounts available",
+    "Rapid response time with same-day setup",
+    "24-hour manned control room",
+    "Real-time incident reports with GPS tracking",
+    "SIA-approved company since 2009",
   ];
 
   const keyFeatures = [
-    "Customisable service - easily modified or upgraded",
-    "Fast mobile support teams with enhanced communications",
-    "Real-time Time & Attendance systems",
-    "Single point of contact throughout",
-    "Locally managed team",
-    "Single invoicing system",
+    "SIA-licensed security officers vetted to BS7858",
+    "Experienced management with over 30 years of Greater Manchester Police experience",
+    "Cutting-edge technology for real-time monitoring",
+    "Flexible services including concierge and caretaker roles",
+    "Proactive approach to prevent theft and vandalism",
+    "Customizable concrete block configurations",
   ];
 
   const processSteps = [
     {
       title: "1. Site Visit",
       description:
-        "Request a free, no-obligation quotation. We complete a full site survey, risk assessment, and discuss your facility management requirements.",
+        "Request a free, no-obligation quotation. We complete a full site survey, risk assessment, and discuss your security and concrete block hire requirements.",
     },
     {
       title: "2. Service Delivery",
       description:
-        "We provide tailored cleaning, maintenance, or grounds services, with onsite training or deployment for seamless execution.",
+        "Complete the installation of concrete blocks, CCTV, or patrol systems, or provide onsite training for manned guarding before deployment.",
     },
     {
       title: "3. Friendly Support",
@@ -142,7 +131,7 @@ export default function FacilityManagement() {
           transition={{ duration: 0.6 }}
           className="relative min-h-[700px] w-full bg-cover bg-center rounded-3xl shadow-2xl mb-20 overflow-hidden"
           style={{
-            backgroundImage: "url('/services/Facility-Management.jpeg')",
+            backgroundImage: "url('/services/Concrete_Block_Hire.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-red-900/85 to-red-300/60 rounded-3xl"></div>
@@ -154,10 +143,10 @@ export default function FacilityManagement() {
               className="w-full lg:w-1/2 text-white pr-0 lg:pr-12 mb-10 lg:mb-0"
             >
               <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight">
-                Facility Management Services Northwest
+                Concrete Block Hire Nationwide
               </h1>
               <p className="text-xl text-gray-100 max-w-lg mb-8 leading-relaxed">
-                MAK Security offers comprehensive facility management services in Manchester, Liverpool, and the Northwest, providing tailored cleaning, maintenance, and grounds solutions for commercial properties.
+                MAK Security provides concrete protector blocks and barriers for security, safety, traffic management, flood defense, and more, with nationwide delivery from Manchester, Liverpool, and Birmingham.
               </p>
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -174,7 +163,7 @@ export default function FacilityManagement() {
           </div>
         </motion.div>
 
-        {/* Facility Management Description */}
+        {/* Concrete Block Hire Description */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 -z-10">
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-50 to-white opacity-95"></div>
@@ -189,7 +178,7 @@ export default function FacilityManagement() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-red-700 mb-4">
-                Comprehensive Facility Management Solutions
+                Professional Concrete Block Hire Solutions
               </h2>
               <div className="w-24 h-1 bg-red-500 mx-auto"></div>
             </motion.div>
@@ -207,7 +196,7 @@ export default function FacilityManagement() {
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.2 }}
                 >
-                  <span className="text-red-500 font-semibold">Facility management</span> is essential for maintaining high standards in commercial properties. Since 2009, MAK Security has expanded from bespoke security to a one-stop shop for facility management services across Manchester, Liverpool, and the Northwest.
+                  <span className="text-red-500 font-semibold">Concrete block hire</span> from MAK Security offers a cost-effective and robust solution for securing vacant properties, managing traffic, or protecting against flood risks. Our services are available nationwide, with rapid deployment from our bases in Manchester, Liverpool, and Birmingham.
                 </motion.p>
                 <motion.p
                   className="text-lg text-gray-700 leading-relaxed"
@@ -215,7 +204,7 @@ export default function FacilityManagement() {
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.4 }}
                 >
-                  Our services include office and industrial cleaning, property maintenance (painting, plumbing, electrical), and grounds maintenance (mowing, landscaping), all tailored to your specific needs.
+                  Combined with our SIA-licensed manned guarding services, our concrete blocks provide a physical deterrent against vandalism, trespassers, and unauthorized access, ensuring your premises remain secure.
                 </motion.p>
                 <motion.p
                   className="text-lg text-gray-700 leading-relaxed"
@@ -223,7 +212,7 @@ export default function FacilityManagement() {
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.6 }}
                 >
-                  With fast mobile support teams, real-time tracking, and a single point of contact, we ensure professional, reliable solutions that enhance your property’s appearance and functionality.
+                  Our team includes court enforcement specialists for rapid response to issues like squatter evictions, and our 24-hour control room ensures real-time incident reporting.
                 </motion.p>
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -232,7 +221,7 @@ export default function FacilityManagement() {
                   className="pt-4"
                 >
                   <button className="px-8 py-3 bg-[#FF0600] text-white rounded-lg font-semibold transition-colors shadow-md hover:shadow-lg">
-                    Request Free Facility Management Assessment
+                    Request Free Concrete Block Hire Quote
                   </button>
                 </motion.div>
               </motion.div>
@@ -245,8 +234,8 @@ export default function FacilityManagement() {
               >
                 <div className="relative group rounded-2xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/services/Facility_management-2-400x300.jpg"
-                    alt="Facility management services for commercial properties"
+                    src="/services/concre.jpg"
+                    alt="MAK Security concrete block installation"
                     width={1200}
                     height={400}
                     className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
@@ -255,8 +244,8 @@ export default function FacilityManagement() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-blue-900/10"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h3 className="text-xl font-bold mb-2">Facility Management</h3>
-                    <p className="text-blue-100">Tailored cleaning and maintenance</p>
+                    <h3 className="text-xl font-bold mb-2">Concrete Block Hire</h3>
+                    <p className="text-blue-100">Secure your site effectively</p>
                   </div>
                   <div className="absolute top-0 right-0 w-16 h-16 border-t-4 border-r-4 border-blue-500"></div>
                 </div>
@@ -282,7 +271,7 @@ export default function FacilityManagement() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-red-700 mb-4">
-                Benefits of MAK Facility Management
+                Benefits of MAK Concrete Block Hire
               </h2>
               <div className="w-24 h-1 bg-red-500 mx-auto"></div>
             </motion.div>
@@ -314,7 +303,7 @@ export default function FacilityManagement() {
                 transition={{ duration: 0.5 }}
                 className="text-4xl font-bold text-white mb-4"
               >
-                Our Facility Management Services
+                Our Concrete Block Hire Services
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0 }}
@@ -322,7 +311,7 @@ export default function FacilityManagement() {
                 transition={{ delay: 0.2, duration: 0.6 }}
                 className="text-xl text-blue-100 max-w-3xl mx-auto"
               >
-                MAK Security offers a wide range of cleaning, maintenance, and grounds services tailored to commercial properties across the Northwest.
+                MAK Security offers a comprehensive range of concrete block hire services, complemented by manned guarding and court enforcement, to secure your premises nationwide.
               </motion.p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -332,44 +321,16 @@ export default function FacilityManagement() {
               >
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mr-4">
-                    <BuildingOfficeIcon className="w-6 h-6 text-white" />
+                    <CubeIcon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">Cleaning Services</h3>
+                  <h3 className="text-xl font-semibold text-white">Concrete Block Solutions</h3>
                 </div>
                 <ul className="space-y-3">
                   {[
-                    "Office Cleaning",
-                    "Window Cleaning",
-                    "Carpet Cleaning",
-                    "Industrial Cleaning",
-                    "Daytime Cleaning",
-                    "Jet Washing",
-                  ].map((service) => (
-                    <li key={service} className="flex items-center">
-                      <CheckCircleIcon className="w-5 h-5 text-blue-300 mr-2" />
-                      <span className="text-blue-100">{service}</span>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-              <motion.div
-                whileHover={{ y: -5 }}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-blue-300 transition-all"
-              >
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mr-4">
-                    <ClockIcon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white">Specialized Cleaning</h3>
-                </div>
-                <ul className="space-y-3">
-                  {[
-                    "Social Housing Cleaning",
-                    "Graffiti Removal",
-                    "Kitchen Cleaning",
-                    "IT Equipment Cleaning",
-                    "Washroom Management",
-                    "Washroom Hygiene",
+                    "Security Barriers",
+                    "Traffic Management",
+                    "Flood Defense",
+                    "Silage Pits & Waste Bays",
                   ].map((service) => (
                     <li key={service} className="flex items-center">
                       <CheckCircleIcon className="w-5 h-5 text-blue-300 mr-2" />
@@ -386,15 +347,38 @@ export default function FacilityManagement() {
                   <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mr-4">
                     <ShieldCheckIcon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">Maintenance Services</h3>
+                  <h3 className="text-xl font-semibold text-white">Manned Guarding</h3>
                 </div>
                 <ul className="space-y-3">
                   {[
-                    "Property Maintenance",
-                    "Grounds Maintenance",
-                    "Painting & Decorating",
-                    "Plumbing & Electrical",
-                    "Workspace Improvement",
+                    "SIA-Licensed Security Officers",
+                    "Vacant Property Guarding",
+                    "Concierge & Receptionist Services",
+                    "Periodic Void Property Inspections",
+                  ].map((service) => (
+                    <li key={service} className="flex items-center">
+                      <CheckCircleIcon className="w-5 h-5 text-blue-300 mr-2" />
+                      <span className="text-blue-100">{service}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+              <motion.div
+                whileHover={{ y: -5 }}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-blue-300 transition-all"
+              >
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mr-4">
+                    <ShieldCheckIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">Additional Security Services</h3>
+                </div>
+                <ul className="space-y-3">
+                  {[
+                    "Court Enforcement Support",
+                    "24-Hour Control Room",
+                    "Real-Time Incident Reporting",
+                    "GPS Tracking for Officers",
                   ].map((service) => (
                     <li key={service} className="flex items-center">
                       <CheckCircleIcon className="w-5 h-5 text-blue-300 mr-2" />
@@ -411,7 +395,7 @@ export default function FacilityManagement() {
               className="text-center mt-16"
             >
               <button className="px-8 py-3 bg-white text-blue-900 rounded-lg font-semibold hover:bg-blue-100 transition-colors shadow-lg hover:shadow-xl">
-                Request Facility Management Quote
+                Request Concrete Block Hire Quote
               </button>
             </motion.div>
           </div>
@@ -474,7 +458,7 @@ export default function FacilityManagement() {
                 transition={{ delay: 0.2, duration: 0.6 }}
                 className="text-xl text-blue-100 max-w-3xl mx-auto"
               >
-                MAK Security is your one-stop shop for facility management, combining customizable services with a locally managed team and advanced technology.
+                MAK Security is your trusted partner for concrete block hire and manned guarding, with SIA-approved officers and a management team with over 30 years of Greater Manchester Police experience.
               </motion.p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -487,12 +471,12 @@ export default function FacilityManagement() {
               >
                 <ul className="space-y-3">
                   {[
-                    "Customizable service tailored to your needs",
-                    "Single point of contact for seamless communication",
-                    "Locally managed team for personalized service",
-                    "Single invoicing system for simplicity",
-                    "SIA approved company since 2009",
-                    "24-hour manned control room with cutting-edge technology",
+                    "SIA-approved contractor since 2009",
+                    "Management with 30+ years of police experience",
+                    "Nationwide delivery from Manchester, Liverpool, Birmingham",
+                    "24/7 manned control room with GPS tracking",
+                    "Flexible concrete block and security solutions",
+                    "Rapid response for court enforcement and evictions",
                   ].map((reason, index) => (
                     <li key={index} className="flex items-center">
                       <CheckCircleIcon className="w-5 h-5 text-blue-300 mr-2" />
@@ -519,8 +503,8 @@ export default function FacilityManagement() {
               >
                 <div className="relative group rounded-2xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/services/mak3.jpg"
-                    alt="MAK Security facility management team"
+                    src="/services/Supervisor-security.jpg"
+                    alt="MAK Security concrete block hire team"
                     width={400}
                     height={400}
                     className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
@@ -529,7 +513,7 @@ export default function FacilityManagement() {
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-blue-900/10"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                     <h3 className="text-xl font-bold mb-2">Expert Team</h3>
-                    <p className="text-blue-100">Professional facility management</p>
+                    <p className="text-blue-100">Professional security solutions</p>
                   </div>
                 </div>
               </motion.div>
@@ -547,8 +531,8 @@ export default function FacilityManagement() {
         >
           <div className="absolute inset-0 z-0">
             <Image
-              src="/services/download.jpg"
-              alt="Facility management process"
+              src="/services/Concrete_Block_Hire.jpg"
+              alt="Concrete block hire process"
               width={1200}
               height={800}
               className="w-full h-full object-cover"
@@ -605,7 +589,7 @@ export default function FacilityManagement() {
                 </div>
                 <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">Tailored Solutions</h2>
                 <p className="text-gray-600 leading-relaxed">
-                  We design bespoke facility management plans based on site surveys to meet your specific needs.
+                  We design bespoke concrete block and security plans based on site surveys to meet your specific needs.
                 </p>
                 <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
                   <svg
@@ -630,7 +614,7 @@ export default function FacilityManagement() {
                 </div>
                 <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">Professional Execution</h2>
                 <p className="text-gray-600 leading-relaxed">
-                  Our skilled team delivers cleaning and maintenance services with precision and minimal disruption.
+                  Our SIA-licensed officers and concrete block installations ensure precise and effective security solutions.
                 </p>
                 <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
                   <svg
@@ -655,7 +639,7 @@ export default function FacilityManagement() {
                 </div>
                 <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">Ongoing Support</h2>
                 <p className="text-gray-600 leading-relaxed">
-                  Our dedicated account managers provide 24/7 support to ensure your facility remains in top condition.
+                  Our dedicated account managers provide 24/7 support to ensure your security needs are met.
                 </p>
               </motion.div>
             </div>
@@ -686,18 +670,17 @@ export default function FacilityManagement() {
                 transition={{ delay: 0.2 }}
                 className="text-lg text-gray-600 max-w-3xl mx-auto"
               >
-                MAK Integrated Services holds SIA-approved contractor status for Security Guarding and Key Holding Services.
+                MAK Integrated Services holds SIA-approved contractor status for Security Guarding and Key Holding Services, and is ISO9001 registered.
                 <span className="block mt-2 text-blue-700 font-medium">ISO Cert No.7971</span>
               </motion.p>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-6 max-w-6xl mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
               {[
                 { name: "ICO", image: "/services/ICO-logo.png" },
                 { name: "SIA", image: "/services/SIA-Logo.png" },
                 { name: "ISOQAR", image: "/services/ISOQAR-Logo.png" },
                 { name: "NASDU", image: "/services/NASDU-logo.png" },
                 { name: "SafeContractor", image: "/services/Safe-Contractor.png" },
-                { name: "LS", image: "/services/LS-Logo.png" },
               ].map((cert, index) => (
                 <motion.div
                   key={index}
