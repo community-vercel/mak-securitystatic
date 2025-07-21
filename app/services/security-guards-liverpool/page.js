@@ -263,17 +263,36 @@ const CertificationsSection = () => {
 
 // Sub-component: How It Works Item
 const HowItWorksItem = ({ title, description, index }) => {
-  const icons = [
-    <svg className="w-12 h-12 text-[#FF0600]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+   const icons = [
+    <svg 
+      key="search-icon"
+      className="w-12 h-12 text-[#FF0600]" 
+      fill="none" 
+      stroke="currentColor" 
+      viewBox="0 0 24 24"
+    >
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
     </svg>,
-    <svg className="w-12 h-12 text-[#FF0600]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg 
+      key="megaphone-icon"
+      className="w-12 h-12 text-[#FF0600]" 
+      fill="none" 
+      stroke="currentColor" 
+      viewBox="0 0 24 24"
+    >
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14m-6 0H5a2 2 0 01-2-2V6a2 2 0 012-2h4m6 0H9m6 14v4a2 2 0 01-2 2H7a2 2 0 01-2-2v-4" />
     </svg>,
-    <svg className="w-12 h-12 text-[#FF0600]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg 
+      key="phone-icon"
+      className="w-12 h-12 text-[#FF0600]" 
+      fill="none" 
+      stroke="currentColor" 
+      viewBox="0 0 24 24"
+    >
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
     </svg>,
   ];
+
 
   return (
     <motion.div
@@ -398,7 +417,7 @@ export default function SecurityGuardsLiverpool() {
                   <span className="absolute bottom-0 left-0 w-24 h-1 bg-[#FF0600] rounded"></span>
                 </h1>
                 <p className="text-xl text-white max-w-lg mb-8 leading-relaxed">
-                  Protect your Liverpool property with MAK Security's 24/7 trained guards, deterring theft and vandalism.
+                  Protect your Liverpool property with MAK Securitys 24/7 trained guards, deterring theft and vandalism.
                 </p>
                 <motion.div
                   whileHover={{ scale: 1.1 }}
