@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8 border-b border-gray-700 pb-10">
         {/* Column 1: Get in Touch */}
         <div>
-          <h5 className="text-lg font-bold mb-3 border-b border-red-600 pb-1">Get In Touch</h5>
+<p className="text-lg font-bold mb-3 border-b border-red-600 pb-1">Get In Touch</p>
           <p className="text-sm mb-1 font-semibold"><FaMapMarkerAlt className="inline mr-2" />MAK Security Head Office</p>
           <p className="text-sm ml-5">Manor House</p>
           <p className="text-sm ml-5">Manor Street</p>
@@ -19,12 +19,21 @@ export default function Footer() {
           <p className="text-sm mb-3"><FaEnvelope className="inline mr-2" />sales@mak-security.co.uk</p>
 
           {/* Social icons */}
-          <div className="flex space-x-3 mt-4">
-            <a href="#" className="bg-blue-700 p-2 rounded"><FaFacebookF /></a>
-            <a href="#" className="bg-blue-500 p-2 rounded"><FaTwitter /></a>
-            <a href="#" className="bg-pink-600 p-2 rounded"><FaInstagram /></a>
-            <a href="#" className="bg-blue-800 p-2 rounded"><FaLinkedinIn /></a>
-          </div>
+      <div className="flex space-x-3 mt-4">
+  <a href="#" className="bg-blue-700 p-2 rounded" aria-label="Facebook">
+    <FaFacebookF />
+  </a>
+  <a href="#" className="bg-blue-500 p-2 rounded" aria-label="Twitter">
+    <FaTwitter />
+  </a>
+  <a href="#" className="bg-pink-600 p-2 rounded" aria-label="Instagram">
+    <FaInstagram />
+  </a>
+  <a href="#" className="bg-blue-800 p-2 rounded" aria-label="LinkedIn">
+    <FaLinkedinIn />
+  </a>
+</div>
+
         </div>
 
         {/* Column 2: Top Pages */}
