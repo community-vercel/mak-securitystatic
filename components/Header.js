@@ -4,7 +4,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import { FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
+import { FaBars, FaTimes, FaChevronDown, FaChevronRight } from 'react-icons/fa';
 
 const navLinks = [
   { name: 'Home', href: '/' },
@@ -153,7 +153,7 @@ export default function Header() {
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-600 hover:text-white transition-colors duration-200"
                       >
                         {subLink.name}
-                        {subLink.subServices && <FaChevronDown className="ml-1 inline text-xs" />}
+                        {subLink.subServices && <FaChevronRight className="ml-1 inline text-xs" />}
                       </Link>
                       {subLink.subServices && (
                         <div className="absolute left-full top-0 w-48 bg-white shadow-lg rounded-md opacity-0 group-hover/sub:opacity-100 group-hover/sub:visible invisible transition-all duration-200 ease-in-out">
