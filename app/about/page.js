@@ -106,7 +106,7 @@ export default function AboutPage() {
       <section className="py-12 text-center bg-gray-100">
         <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-md">
           <p className="text-gray-700 italic">
-            "MAK Security has been an invaluable partner for our business. Their professionalism and rapid response times give us complete confidence in our security." — <strong>Paul H., Retail Manager</strong>
+            MAK Security has been an invaluable partner for our business. Their professionalism and rapid response times give us complete confidence in our security. — <strong>Paul H., Retail Manager</strong>
           </p>
         </div>
       </section>
