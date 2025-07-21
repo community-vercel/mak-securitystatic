@@ -426,7 +426,7 @@ export default function Services() {
     {
       title: 'Car Park Management',
       subtitle: 'CAR PARK MANAGEMENT',
-      image: '/services/car-park-management.png',
+      image: '/services/CarPark_Management.webp',
     },
     {
       title: 'Concrete Block Hire',
