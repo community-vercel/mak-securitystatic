@@ -406,22 +406,22 @@ export default function Services() {
     {
       title: 'Manned Guarding',
       subtitle: 'MANNED GUARDING',
-      image: '/services/manned-guarding.png',
+      image: '/services/Manned-Guarding.webp',
     },
     {
       title: 'Event Security',
       subtitle: 'EVENT SECURITY',
-      image: '/services/event-security.png',
+      image: '/services/Event-Security.webp',
     },
     {
       title: 'Key Holding',
       subtitle: 'KEY HOLDING & ALARM RESPONSE',
-      image: '/services/key-holding.png',
+      image: '/services/Key-Holding.webp',
     },
     {
       title: 'Facility Management',
       subtitle: 'FACILITY MANAGEMENT',
-      image: '/services/facility-management.png',
+      image: '/services/Facility-Management.webp',
     },
     {
       title: 'Car Park Management',
@@ -436,7 +436,7 @@ export default function Services() {
     {
       title: 'CCTV',
       subtitle: 'CCTV',
-      image: '/services/cctv.png',
+      image: '/services/CCTV.webp',
     },
   ];
 
