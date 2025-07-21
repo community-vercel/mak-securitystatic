@@ -4,13 +4,15 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ShieldCheckIcon,
-  KeyIcon,
+  VideoCameraIcon,
   ClockIcon,
   CheckCircleIcon,
+  FireIcon,
 } from "@heroicons/react/24/outline";
 import ContactForm from "@/components/contactus";
-
 import TestimonialSlider from "@/components/TestimonalSlider";
+import Image from "next/image";
+
 // Process Card Component
 const ProcessCard = ({ title, description, index }) => {
   return (
@@ -42,11 +44,8 @@ const ServiceItem = ({ service, index }) => {
   );
 };
 
-// Testimonial Slider Component
-
-
 // Main Component
-export default function KeyHolding() {
+export default function CCTVServices() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -74,31 +73,41 @@ export default function KeyHolding() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const cctvSystems = [
+    "Ultra HD (4K) CCTV",
+    "Battery Operated CCTV",
+    "Facial Recognition CCTV",
+    "Automatic Number Plate Recognition (ANPR) CCTV",
+    "Totally Wireless Temporary CCTV",
+    "Covert CCTV",
+    "Fuel/Solar Powered CCTV Towers",
+  ];
+
   const services = [
-    "Key holding",
-    "Alarm response",
-    "Lock and unlock services",
-    "Emergency access",
-    "Key management",
-    "Mobile patrols",
-    "24/7 response services",
+    "CCTV Maintenance",
+    "CCTV Monitoring",
+    "Key Holding",
+    "Intruder Response",
+    "Event Management",
+    "Incident Reporting",
+    "Perimeter Protection",
   ];
 
   const processSteps = [
     {
-      title: "1. Key Collection",
+      title: "1. Site Visit",
       description:
-        "We conduct a secure key collection process, ensuring your keys are safely transferred to our SIA-approved key holding facilities.",
+        "Request a free, no-obligation quotation. We complete a full site survey, risk assessment, and discuss your security requirements.",
     },
     {
-      title: "2. Secure Storage",
+      title: "2. Service Delivery",
       description:
-        "Keys are stored in a high-security environment with restricted access, monitored 24/7 to ensure maximum safety.",
+        "We handle the installation of CCTV systems or provide onsite training for manned guarding and mobile services before deployment.",
     },
     {
-      title: "3. Rapid Response",
+      title: "3. Friendly Support",
       description:
-        "Our trained response team is available 24/7 to respond to alarms or access requests, ensuring quick and professional action.",
+        "A dedicated account manager is assigned to you, available 24/7 throughout the service delivery or deployment process.",
     },
   ];
 
@@ -112,7 +121,7 @@ export default function KeyHolding() {
           transition={{ duration: 0.6 }}
           className="relative min-h-[700px] w-full bg-cover bg-center rounded-3xl shadow-2xl mb-20 overflow-hidden"
           style={{
-            backgroundImage: "url('/services/Key-Holding.jpeg')",
+            backgroundImage: "url('/services/cctv-img3.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-red-900/85 to-red-300/60 rounded-3xl"></div>
@@ -124,13 +133,13 @@ export default function KeyHolding() {
               className="w-full lg:w-1/2 text-white pr-0 lg:pr-12 mb-10 lg:mb-0"
             >
               <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight">
-                Key Holding Services Manchester
+                CCTV Security Systems Manchester
               </h1>
               <p className="text-xl text-gray-100 max-w-lg mb-8 leading-relaxed">
-                MAK Security provides professional key holding and alarm response services across Manchester and the North West, ensuring rapid response and secure key management for your business or property.
+                MAK Security provides cutting-edge CCTV and fire protection solutions across Manchester and the North West, offering bespoke systems, 24/7 monitoring, and rapid response for ultimate security.
               </p>
               <motion.div
-              whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ scale: 1.05 }}
                 className="inline-block bg-[#FF0600] text-white py-3 px-6 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-300"
               >
                 <Link href="/services">Explore Our Services</Link>
@@ -144,7 +153,7 @@ export default function KeyHolding() {
           </div>
         </motion.div>
 
-        {/* Key Holding Description */}
+        {/* CCTV Description */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 -z-10">
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-50 to-white opacity-95"></div>
@@ -159,7 +168,7 @@ export default function KeyHolding() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-red-700 mb-4">
-                Key Holding & Alarm Response Services
+                Advanced CCTV & Surveillance Solutions
               </h2>
               <div className="w-24 h-1 bg-red-500 mx-auto"></div>
             </motion.div>
@@ -177,7 +186,7 @@ export default function KeyHolding() {
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.2 }}
                 >
-                  <span className="text-red-500 font-semibold">Secure key management</span> is critical for protecting your business or property. MAK Security’s SIA-approved key holding services ensure your keys are stored securely and accessible only by authorized personnel.
+                  <span className="text-red-500 font-semibold">Cutting-edge surveillance</span> is vital for modern security. MAK Security offers bespoke CCTV solutions, from Ultra HD (4K) to AI-powered facial recognition and ANPR systems, tailored to your needs.
                 </motion.p>
                 <motion.p
                   className="text-lg text-gray-700 leading-relaxed"
@@ -185,7 +194,7 @@ export default function KeyHolding() {
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.4 }}
                 >
-                  Our rapid alarm response team is available 24/7, providing immediate action in the event of an alarm trigger, reducing risk and ensuring peace of mind without the need for on-site staff involvement.
+                  Our systems include advanced features like CCTV Trip Wire, which triggers alarms when designated perimeters are breached, and AI technology that distinguishes human intruders from animals to reduce false alarms.
                 </motion.p>
                 <motion.p
                   className="text-lg text-gray-700 leading-relaxed"
@@ -193,7 +202,7 @@ export default function KeyHolding() {
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.6 }}
                 >
-                  Operating across Manchester, Liverpool, London, Birmingham, and the North West, MAK Security offers tailored key holding solutions to meet your specific needs, backed by our industry-leading certifications.
+                  From small domestic setups to large-scale commercial systems, we provide end-to-end services—site surveys, installation, monitoring, and maintenance—across Manchester, Liverpool, London, Birmingham, and the North West.
                 </motion.p>
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -202,7 +211,7 @@ export default function KeyHolding() {
                   className="pt-4"
                 >
                   <button className="px-8 py-3 bg-[#FF0600] text-white rounded-lg font-semibold transition-colors shadow-md hover:shadow-lg">
-                    Request Key Holding Assessment
+                    Request Free CCTV Assessment
                   </button>
                 </motion.div>
               </motion.div>
@@ -214,16 +223,19 @@ export default function KeyHolding() {
                 className="lg:w-1/3 flex justify-center relative"
               >
                 <div className="relative group rounded-2xl overflow-hidden shadow-2xl">
-                  <img
-                    src="/services/Key_Holding_Security.jpg"
-                    alt="Key holding and alarm response team"
-                    className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-                    style={{ minHeight: "400px" }}
-                  />
+               <Image
+  src="/CCTV.jpg"
+  alt="CCTV camera installation and monitoring"
+  width={1200} // adjust based on actual image size
+  height={400} // adjust based on actual image size
+  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+  style={{ minHeight: "400px" }}
+  priority // optional: preloads image for performance
+/>
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-blue-900/10"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h3 className="text-xl font-bold mb-2">24/7 Key Holding</h3>
-                    <p className="text-blue-100">Secure and rapid response</p>
+                    <h3 className="text-xl font-bold mb-2">Advanced CCTV Systems</h3>
+                    <p className="text-blue-100">Bespoke surveillance solutions</p>
                   </div>
                   <div className="absolute top-0 right-0 w-16 h-16 border-t-4 border-r-4 border-blue-500"></div>
                 </div>
@@ -232,7 +244,91 @@ export default function KeyHolding() {
           </div>
         </section>
 
-        {/* Services Section */}
+        {/* Fire Protection Section */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="relative py-20 bg-gray-50"
+        >
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-red-700 mb-4">
+                Wireless Fire Protection Systems
+              </h2>
+              <div className="w-24 h-1 bg-red-500 mx-auto"></div>
+            </motion.div>
+            <div className="flex flex-col lg:flex-row gap-12 items-center max-w-7xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, staggerChildren: 0.1 }}
+                viewport={{ once: true }}
+                className="lg:w-2/3 space-y-8"
+              >
+                <motion.p
+                  className="text-lg text-gray-700 leading-relaxed"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: 0.2 }}
+                >
+                  Our <span className="text-red-500 font-semibold">wireless SiteWatch fire protection system</span> is a cost-effective, self-sufficient solution that safeguards your property against fire threats, seamlessly integrating with our CCTV systems.
+                </motion.p>
+                <motion.p
+                  className="text-lg text-gray-700 leading-relaxed"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: 0.4 }}
+                >
+                  Requiring no wires or mains power, this reliable fire alarm system is monitored 24/7 from our North West-based control room, ensuring compliance and rapid response to fire alerts.
+                </motion.p>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: 0.6 }}
+                  className="pt-4"
+                >
+                  <button className="px-8 py-3 bg-[#FF0600] text-white rounded-lg font-semibold transition-colors shadow-md hover:shadow-lg">
+                    Learn More About Fire Protection
+                  </button>
+                </motion.div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="lg:w-1/3 flex justify-center relative"
+              >
+                <div className="relative group rounded-2xl overflow-hidden shadow-2xl">
+                 <Image
+  src="/services/Videofied-Detector-300x500.jpg"
+  alt="Wireless fire protection system"
+  width={300}
+  height={500}
+  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+  style={{ minHeight: "400px" }}
+/>
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-blue-900/10"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <h3 className="text-xl font-bold mb-2">Fire Protection</h3>
+                    <p className="text-blue-100">Wireless, reliable, compliant</p>
+                  </div>
+                  <div className="absolute top-0 right-0 w-16 h-16 border-t-4 border-r-4 border-blue-500"></div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* CCTV Systems Section */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -252,7 +348,7 @@ export default function KeyHolding() {
                 transition={{ duration: 0.5 }}
                 className="text-4xl font-bold text-white mb-4"
               >
-                Our Key Holding Services Include
+                Our CCTV Systems
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0 }}
@@ -260,7 +356,7 @@ export default function KeyHolding() {
                 transition={{ delay: 0.2, duration: 0.6 }}
                 className="text-xl text-blue-100 max-w-3xl mx-auto"
               >
-                MAK Security offers comprehensive key holding and alarm response services tailored to your needs, ensuring security and convenience.
+                MAK Security offers a range of advanced CCTV systems, from Ultra HD to battery-operated and AI-powered solutions, tailored to your security needs.
               </motion.p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -270,15 +366,15 @@ export default function KeyHolding() {
               >
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mr-4">
-                    <KeyIcon className="w-6 h-6 text-white" />
+                    <VideoCameraIcon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">Key Management</h3>
+                  <h3 className="text-xl font-semibold text-white">Advanced Systems</h3>
                 </div>
                 <ul className="space-y-3">
-                  {["Key holding", "Secure key storage", "Key management"].map((service) => (
-                    <li key={service} className="flex items-center">
+                  {["Ultra HD (4K) CCTV", "Facial Recognition CCTV", "ANPR CCTV"].map((system) => (
+                    <li key={system} className="flex items-center">
                       <CheckCircleIcon className="w-5 h-5 text-blue-300 mr-2" />
-                      <span className="text-blue-100">{service}</span>
+                      <span className="text-blue-100">{system}</span>
                     </li>
                   ))}
                 </ul>
@@ -291,13 +387,13 @@ export default function KeyHolding() {
                   <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mr-4">
                     <ClockIcon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">Rapid Response</h3>
+                  <h3 className="text-xl font-semibold text-white">Flexible Solutions</h3>
                 </div>
                 <ul className="space-y-3">
-                  {["Alarm response", "24/7 response services", "Emergency access"].map((service) => (
-                    <li key={service} className="flex items-center">
+                  {["Battery Operated CCTV", "Totally Wireless Temporary CCTV", "Covert CCTV"].map((system) => (
+                    <li key={system} className="flex items-center">
                       <CheckCircleIcon className="w-5 h-5 text-blue-300 mr-2" />
-                      <span className="text-blue-100">{service}</span>
+                      <span className="text-blue-100">{system}</span>
                     </li>
                   ))}
                 </ul>
@@ -310,17 +406,52 @@ export default function KeyHolding() {
                   <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mr-4">
                     <ShieldCheckIcon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">Additional Services</h3>
+                  <h3 className="text-xl font-semibold text-white">Power Options</h3>
                 </div>
                 <ul className="space-y-3">
-                  {["Lock and unlock services", "Mobile patrols"].map((service) => (
-                    <li key={service} className="flex items-center">
+                  {["Fuel/Solar Powered CCTV Towers"].map((system) => (
+                    <li key={system} className="flex items-center">
                       <CheckCircleIcon className="w-5 h-5 text-blue-300 mr-2" />
-                      <span className="text-blue-100">{service}</span>
+                      <span className="text-blue-100">{system}</span>
                     </li>
                   ))}
                 </ul>
               </motion.div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Services Section */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="relative py-20 bg-gray-50"
+        >
+          <div className="container mx-auto px-4 relative">
+            <div className="text-center mb-16">
+              <motion.h2
+                initial={{ y: 20 }}
+                whileInView={{ y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="text-4xl font-bold text-red-700 mb-4"
+              >
+                Comprehensive Security Services
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+                className="text-xl text-gray-700 max-w-3xl mx-auto"
+              >
+                Our CCTV monitoring is enhanced with event management, key holding, and intruder response services for complete security.
+              </motion.p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {services.map((service, index) => (
+                <ServiceItem key={index} service={service} index={index} />
+              ))}
             </div>
             <motion.div
               initial={{ opacity: 0 }}
@@ -328,10 +459,92 @@ export default function KeyHolding() {
               transition={{ delay: 0.4 }}
               className="text-center mt-16"
             >
-              <button className="px-8 py-3 bg-white text-blue-900 rounded-lg font-semibold hover:bg-blue-100 transition-colors shadow-lg hover:shadow-xl">
-                Request Key Holding Solution
+              <button className="px-8 py-3 bg-[#FF0600] text-white rounded-lg font-semibold hover:bg-red-600 transition-colors shadow-lg hover:shadow-xl">
+                Request Full Security Package
               </button>
             </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Remote Monitoring Section */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="relative py-20 bg-[#374B5B]"
+        >
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute top-0 left-0 w-32 h-32 bg-blue-800 rounded-full filter blur-3xl opacity-20"></div>
+            <div className="absolute bottom-0 right-0 w-64 h-64 bg-blue-600 rounded-full filter blur-3xl opacity-10"></div>
+          </div>
+          <div className="container mx-auto px-4 relative">
+            <div className="text-center mb-16">
+              <motion.h2
+                initial={{ y: 20 }}
+                whileInView={{ y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="text-4xl font-bold text-white mb-4"
+              >
+                24/7 Remote Monitoring
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+                className="text-xl text-blue-100 max-w-3xl mx-auto"
+              >
+                From our state-of-the-art North West control room, we monitor all major transmission systems using the industry-leading Immix platform for rapid response.
+              </motion.p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="space-y-6"
+              >
+                <p className="text-lg text-blue-100 leading-relaxed">
+                  Our highly trained personnel provide 24/7 monitoring, ensuring swift resolution to site events. With our Transparent Services System (TSS), clients can access a web portal to view real-time site activity and review our actions.
+                </p>
+                <p className="text-lg text-blue-100 leading-relaxed">
+                  Our DVRs offer at least 30 days of storage, viewable via mobile apps from anywhere, providing flexibility and peace of mind.
+                </p>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: 0.4 }}
+                >
+                  <button className="px-8 py-3 bg-white text-blue-900 rounded-lg font-semibold hover:bg-blue-100 transition-colors shadow-lg hover:shadow-xl">
+                    Explore Monitoring Services
+                  </button>
+                </motion.div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="flex justify-center"
+              >
+                <div className="relative group rounded-2xl overflow-hidden shadow-2xl">
+                 <Image
+  src="/services/CCTV_Trip_Wire-400x400.jpg"
+  alt="MAK Security control room for CCTV monitoring"
+  width={400}
+  height={400}
+  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+  style={{ minHeight: "400px" }}
+/>
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-blue-900/10"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <h3 className="text-xl font-bold mb-2">Control Room</h3>
+                    <p className="text-blue-100">24/7 monitoring with Immix</p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </motion.div>
 
@@ -345,8 +558,8 @@ export default function KeyHolding() {
         >
           <div className="absolute inset-0 z-0">
             <img
-              src="/services/489621777_1718440492296601_8812595996159204720_n.jpg"
-              alt="Key holding service process"
+              src="/services/images.jpg"
+              alt="CCTV service process"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/30"></div>
@@ -399,9 +612,9 @@ export default function KeyHolding() {
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white font-bold">
                   1
                 </div>
-                <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">Secure Key Holding</h2>
+                <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">Bespoke CCTV Design</h2>
                 <p className="text-gray-600 leading-relaxed">
-                  Our SIA-approved key holding facilities ensure your keys are stored securely with restricted access and 24/7 monitoring.
+                  We tailor CCTV systems with features like Trip Wire and AI analytics to meet your specific security needs.
                 </p>
                 <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
                   <svg
@@ -424,9 +637,9 @@ export default function KeyHolding() {
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white font-bold">
                   2
                 </div>
-                <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">Rapid Alarm Response</h2>
+                <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">Professional Installation</h2>
                 <p className="text-gray-600 leading-relaxed">
-                  Our 24/7 response team acts swiftly to alarm triggers, ensuring immediate action to secure your property.
+                  Our expert technicians install systems with minimal disruption, optimizing coverage for maximum security.
                 </p>
                 <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
                   <svg
@@ -449,9 +662,9 @@ export default function KeyHolding() {
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white font-bold">
                   3
                 </div>
-                <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">Lock/Unlock Services</h2>
+                <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">24/7 Monitoring & Support</h2>
                 <p className="text-gray-600 leading-relaxed">
-                  We provide secure lock and unlock services for your premises, ensuring authorized access at all times.
+                  We provide continuous monitoring and maintenance, ensuring your systems remain reliable and effective.
                 </p>
               </motion.div>
             </div>

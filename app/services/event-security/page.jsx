@@ -4,13 +4,14 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ShieldCheckIcon,
-  KeyIcon,
+  UserGroupIcon,
   ClockIcon,
   CheckCircleIcon,
 } from "@heroicons/react/24/outline";
 import ContactForm from "@/components/contactus";
-
 import TestimonialSlider from "@/components/TestimonalSlider";
+import Image from "next/image";
+
 // Process Card Component
 const ProcessCard = ({ title, description, index }) => {
   return (
@@ -42,11 +43,8 @@ const ServiceItem = ({ service, index }) => {
   );
 };
 
-// Testimonial Slider Component
-
-
 // Main Component
-export default function KeyHolding() {
+export default function EventSecurity() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -74,31 +72,52 @@ export default function KeyHolding() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const eventTypes = [
+    "Premier League and Sports Stadiums",
+    "Major Music Festivals",
+    "Country Shows",
+    "Flower Shows",
+    "Regional Car Shows",
+    "Bonfire Night",
+    "Celebrity Escorts",
+    "Local Council Run Events",
+  ];
+
   const services = [
-    "Key holding",
-    "Alarm response",
-    "Lock and unlock services",
-    "Emergency access",
-    "Key management",
-    "Mobile patrols",
-    "24/7 response services",
+    "Crowd Management",
+    "Door Supervision",
+    "Manned Guarding",
+    "Incident Response",
+    "SIA Trained Event Security",
+    "Pit Trained Personnel",
+  ];
+
+  const benefits = [
+    "Top-class security services",
+    "Dedicated account managers",
+    "24 Hour Control Room facility",
+    "Latest GPS tracking facility",
+    "Rapid response time",
+    "Same day setup",
+    "Real-time incident reports",
+    "Around the clock service",
   ];
 
   const processSteps = [
     {
-      title: "1. Key Collection",
+      title: "1. Site Visit",
       description:
-        "We conduct a secure key collection process, ensuring your keys are safely transferred to our SIA-approved key holding facilities.",
+        "Request a free, no-obligation quotation. We complete a full site survey, risk assessment, and discuss your security requirements.",
     },
     {
-      title: "2. Secure Storage",
+      title: "2. Service Delivery",
       description:
-        "Keys are stored in a high-security environment with restricted access, monitored 24/7 to ensure maximum safety.",
+        "We provide onsite training for manned guarding and mobile services or deploy event security personnel to ensure seamless execution.",
     },
     {
-      title: "3. Rapid Response",
+      title: "3. Friendly Support",
       description:
-        "Our trained response team is available 24/7 to respond to alarms or access requests, ensuring quick and professional action.",
+        "A dedicated account manager is assigned to you, available 24/7 throughout the event to address any concerns.",
     },
   ];
 
@@ -112,7 +131,7 @@ export default function KeyHolding() {
           transition={{ duration: 0.6 }}
           className="relative min-h-[700px] w-full bg-cover bg-center rounded-3xl shadow-2xl mb-20 overflow-hidden"
           style={{
-            backgroundImage: "url('/services/Key-Holding.jpeg')",
+            backgroundImage: "url('/services/Event-Security.jpeg')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-red-900/85 to-red-300/60 rounded-3xl"></div>
@@ -124,13 +143,13 @@ export default function KeyHolding() {
               className="w-full lg:w-1/2 text-white pr-0 lg:pr-12 mb-10 lg:mb-0"
             >
               <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight">
-                Key Holding Services Manchester
+                Event Security Services Nationwide
               </h1>
               <p className="text-xl text-gray-100 max-w-lg mb-8 leading-relaxed">
-                MAK Security provides professional key holding and alarm response services across Manchester and the North West, ensuring rapid response and secure key management for your business or property.
+                MAK Security delivers professional event security across Manchester, Liverpool, Birmingham, London, and the UK, ensuring safe and seamless events with expert crowd management and rapid response.
               </p>
               <motion.div
-              whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ scale: 1.05 }}
                 className="inline-block bg-[#FF0600] text-white py-3 px-6 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-300"
               >
                 <Link href="/services">Explore Our Services</Link>
@@ -144,7 +163,7 @@ export default function KeyHolding() {
           </div>
         </motion.div>
 
-        {/* Key Holding Description */}
+        {/* Event Security Description */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 -z-10">
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-50 to-white opacity-95"></div>
@@ -159,7 +178,7 @@ export default function KeyHolding() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-red-700 mb-4">
-                Key Holding & Alarm Response Services
+                Expert Event Security Solutions
               </h2>
               <div className="w-24 h-1 bg-red-500 mx-auto"></div>
             </motion.div>
@@ -177,7 +196,7 @@ export default function KeyHolding() {
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.2 }}
                 >
-                  <span className="text-red-500 font-semibold">Secure key management</span> is critical for protecting your business or property. MAK Security’s SIA-approved key holding services ensure your keys are stored securely and accessible only by authorized personnel.
+                  <span className="text-red-500 font-semibold">Professional event security</span> is crucial for safe and successful events. MAK Security provides tailored solutions, ensuring a secure atmosphere for events across the UK.
                 </motion.p>
                 <motion.p
                   className="text-lg text-gray-700 leading-relaxed"
@@ -185,7 +204,7 @@ export default function KeyHolding() {
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.4 }}
                 >
-                  Our rapid alarm response team is available 24/7, providing immediate action in the event of an alarm trigger, reducing risk and ensuring peace of mind without the need for on-site staff involvement.
+                  Our SIA-trained and pit-trained personnel specialize in crowd management, door supervision, and strategic manned guarding to prevent incidents like crowd invasions and ensure smooth operations.
                 </motion.p>
                 <motion.p
                   className="text-lg text-gray-700 leading-relaxed"
@@ -193,7 +212,7 @@ export default function KeyHolding() {
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.6 }}
                 >
-                  Operating across Manchester, Liverpool, London, Birmingham, and the North West, MAK Security offers tailored key holding solutions to meet your specific needs, backed by our industry-leading certifications.
+                  Operating nationwide from Manchester, Liverpool, and Birmingham, we cover events like Premier League matches, music festivals, and local council events, delivering rapid response and real-time incident reporting.
                 </motion.p>
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -202,7 +221,7 @@ export default function KeyHolding() {
                   className="pt-4"
                 >
                   <button className="px-8 py-3 bg-[#FF0600] text-white rounded-lg font-semibold transition-colors shadow-md hover:shadow-lg">
-                    Request Key Holding Assessment
+                    Request Free Event Security Assessment
                   </button>
                 </motion.div>
               </motion.div>
@@ -214,16 +233,19 @@ export default function KeyHolding() {
                 className="lg:w-1/3 flex justify-center relative"
               >
                 <div className="relative group rounded-2xl overflow-hidden shadow-2xl">
-                  <img
-                    src="/services/Key_Holding_Security.jpg"
-                    alt="Key holding and alarm response team"
+                  <Image
+                    src="/services/Events_Security-Company.jpg"
+                    alt="Event security personnel managing crowd"
+                    width={1200}
+                    height={400}
                     className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                     style={{ minHeight: "400px" }}
+                    priority
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-blue-900/10"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h3 className="text-xl font-bold mb-2">24/7 Key Holding</h3>
-                    <p className="text-blue-100">Secure and rapid response</p>
+                    <h3 className="text-xl font-bold mb-2">Event Security</h3>
+                    <p className="text-blue-100">Crowd control and safety</p>
                   </div>
                   <div className="absolute top-0 right-0 w-16 h-16 border-t-4 border-r-4 border-blue-500"></div>
                 </div>
@@ -232,7 +254,36 @@ export default function KeyHolding() {
           </div>
         </section>
 
-        {/* Services Section */}
+        {/* Benefits Section */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="relative py-20 bg-gray-50"
+        >
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-red-700 mb-4">
+                Benefits of MAK Event Security
+              </h2>
+              <div className="w-24 h-1 bg-red-500 mx-auto"></div>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {benefits.map((benefit, index) => (
+                <ServiceItem key={index} service={benefit} index={index} />
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Event Types Section */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -252,7 +303,7 @@ export default function KeyHolding() {
                 transition={{ duration: 0.5 }}
                 className="text-4xl font-bold text-white mb-4"
               >
-                Our Key Holding Services Include
+                Events We Cover
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0 }}
@@ -260,7 +311,7 @@ export default function KeyHolding() {
                 transition={{ delay: 0.2, duration: 0.6 }}
                 className="text-xl text-blue-100 max-w-3xl mx-auto"
               >
-                MAK Security offers comprehensive key holding and alarm response services tailored to your needs, ensuring security and convenience.
+                From sports stadiums to music festivals, MAK Security provides tailored security for a wide range of events across the UK.
               </motion.p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -270,15 +321,15 @@ export default function KeyHolding() {
               >
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mr-4">
-                    <KeyIcon className="w-6 h-6 text-white" />
+                    <UserGroupIcon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">Key Management</h3>
+                  <h3 className="text-xl font-semibold text-white">Sports & Festivals</h3>
                 </div>
                 <ul className="space-y-3">
-                  {["Key holding", "Secure key storage", "Key management"].map((service) => (
-                    <li key={service} className="flex items-center">
+                  {["Premier League and Sports Stadiums", "Major Music Festivals"].map((event) => (
+                    <li key={event} className="flex items-center">
                       <CheckCircleIcon className="w-5 h-5 text-blue-300 mr-2" />
-                      <span className="text-blue-100">{service}</span>
+                      <span className="text-blue-100">{event}</span>
                     </li>
                   ))}
                 </ul>
@@ -291,13 +342,13 @@ export default function KeyHolding() {
                   <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mr-4">
                     <ClockIcon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">Rapid Response</h3>
+                  <h3 className="text-xl font-semibold text-white">Community Events</h3>
                 </div>
                 <ul className="space-y-3">
-                  {["Alarm response", "24/7 response services", "Emergency access"].map((service) => (
-                    <li key={service} className="flex items-center">
+                  {["Country Shows", "Flower Shows", "Regional Car Shows", "Bonfire Night"].map((event) => (
+                    <li key={event} className="flex items-center">
                       <CheckCircleIcon className="w-5 h-5 text-blue-300 mr-2" />
-                      <span className="text-blue-100">{service}</span>
+                      <span className="text-blue-100">{event}</span>
                     </li>
                   ))}
                 </ul>
@@ -310,13 +361,13 @@ export default function KeyHolding() {
                   <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mr-4">
                     <ShieldCheckIcon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">Additional Services</h3>
+                  <h3 className="text-xl font-semibold text-white">Specialized Events</h3>
                 </div>
                 <ul className="space-y-3">
-                  {["Lock and unlock services", "Mobile patrols"].map((service) => (
-                    <li key={service} className="flex items-center">
+                  {["Celebrity Escorts", "Local Council Run Events"].map((event) => (
+                    <li key={event} className="flex items-center">
                       <CheckCircleIcon className="w-5 h-5 text-blue-300 mr-2" />
-                      <span className="text-blue-100">{service}</span>
+                      <span className="text-blue-100">{event}</span>
                     </li>
                   ))}
                 </ul>
@@ -329,9 +380,134 @@ export default function KeyHolding() {
               className="text-center mt-16"
             >
               <button className="px-8 py-3 bg-white text-blue-900 rounded-lg font-semibold hover:bg-blue-100 transition-colors shadow-lg hover:shadow-xl">
-                Request Key Holding Solution
+                Request Event Security Quote
               </button>
             </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Services Section */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="relative py-20 bg-gray-50"
+        >
+          <div className="container mx-auto px-4 relative">
+            <div className="text-center mb-16">
+              <motion.h2
+                initial={{ y: 20 }}
+                whileInView={{ y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="text-4xl font-bold text-red-700 mb-4"
+              >
+                Our Event Security Services
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+                className="text-xl text-gray-700 max-w-3xl mx-auto"
+              >
+                Our SIA-trained personnel provide comprehensive event security solutions, ensuring safety and smooth operations.
+              </motion.p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {services.map((service, index) => (
+                <ServiceItem key={index} service={service} index={index} />
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Why Choose MAK Security Section */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="relative py-20 bg-[#374B5B]"
+        >
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute top-0 left-0 w-32 h-32 bg-blue-800 rounded-full filter blur-3xl opacity-20"></div>
+            <div className="absolute bottom-0 right-0 w-64 h-64 bg-blue-600 rounded-full filter blur-3xl opacity-10"></div>
+          </div>
+          <div className="container mx-auto px-4 relative">
+            <div className="text-center mb-16">
+              <motion.h2
+                initial={{ y: 20 }}
+                whileInView={{ y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="text-4xl font-bold text-white mb-4"
+              >
+                Why Choose MAK Security?
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+                className="text-xl text-blue-100 max-w-3xl mx-auto"
+              >
+                With over 50 years of security expertise and 30 years of front-line police experience, MAK Security delivers unparalleled event security services.
+              </motion.p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="space-y-6"
+              >
+                <ul className="space-y-3">
+                  {[
+                    "SIA approved company since 2009",
+                    "Experienced management with over 50 years in security",
+                    "30+ years of front-line Greater Manchester Police experience",
+                    "24-hour manned control room with cutting-edge technology",
+                    "Pre-start shift check calls for reliability",
+                  ].map((reason, index) => (
+                    <li key={index} className="flex items-center">
+                      <CheckCircleIcon className="w-5 h-5 text-blue-300 mr-2" />
+                      <span className="text-blue-100">{reason}</span>
+                    </li>
+                  ))}
+                </ul>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: 0.4 }}
+                >
+                  <button className="px-8 py-3 bg-white text-blue-900 rounded-lg font-semibold hover:bg-blue-100 transition-colors shadow-lg hover:shadow-xl">
+                    Learn More About Us
+                  </button>
+                </motion.div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="flex justify-center"
+              >
+                <div className="relative group rounded-2xl overflow-hidden shadow-2xl">
+                  <Image
+                    src="/services/Event-Concert-Security.jpg"
+                    alt="MAK Security event security team"
+                    width={400}
+                    height={400}
+                    className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                    style={{ minHeight: "400px" }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-blue-900/10"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <h3 className="text-xl font-bold mb-2">Expert Team</h3>
+                    <p className="text-blue-100">SIA-trained professionals</p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </motion.div>
 
@@ -344,9 +520,11 @@ export default function KeyHolding() {
           className="relative py-20 mb-20 overflow-hidden"
         >
           <div className="absolute inset-0 z-0">
-            <img
-              src="/services/489621777_1718440492296601_8812595996159204720_n.jpg"
-              alt="Key holding service process"
+            <Image
+              src="/services/Event-Concert_Security.jpg"
+              alt="Event security process"
+              width={1200}
+              height={800}
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/30"></div>
@@ -399,9 +577,9 @@ export default function KeyHolding() {
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white font-bold">
                   1
                 </div>
-                <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">Secure Key Holding</h2>
+                <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">Tailored Security Plans</h2>
                 <p className="text-gray-600 leading-relaxed">
-                  Our SIA-approved key holding facilities ensure your keys are stored securely with restricted access and 24/7 monitoring.
+                  We design bespoke security plans based on site surveys and risk assessments to meet your event’s needs.
                 </p>
                 <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
                   <svg
@@ -424,9 +602,9 @@ export default function KeyHolding() {
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white font-bold">
                   2
                 </div>
-                <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">Rapid Alarm Response</h2>
+                <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">Professional Deployment</h2>
                 <p className="text-gray-600 leading-relaxed">
-                  Our 24/7 response team acts swiftly to alarm triggers, ensuring immediate action to secure your property.
+                  Our SIA-trained team deploys with precision, ensuring crowd control and safety with minimal disruption.
                 </p>
                 <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
                   <svg
@@ -449,9 +627,9 @@ export default function KeyHolding() {
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white font-bold">
                   3
                 </div>
-                <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">Lock/Unlock Services</h2>
+                <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">24/7 Support</h2>
                 <p className="text-gray-600 leading-relaxed">
-                  We provide secure lock and unlock services for your premises, ensuring authorized access at all times.
+                  Our dedicated account managers provide round-the-clock support to ensure your event runs smoothly.
                 </p>
               </motion.div>
             </div>
