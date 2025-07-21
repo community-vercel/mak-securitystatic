@@ -2,6 +2,9 @@
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
+import Testimonials from '@/components/Testimonials';
+import TestimonialSlider from '@/components/TestimonalSlider';
+import ContactForm from '@/components/contactus';
 
 // Custom CSS for glow and text shadow effects
 const customStyles = `
@@ -14,105 +17,105 @@ const customStyles = `
 `;
 
 // Sub-component: Contact Form
-const ContactForm = ({ formData, handleInputChange, handleSubmit }) => {
-  const inputVariants = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } },
-  };
+// const ContactForm = ({ formData, handleInputChange, handleSubmit }) => {
+//   const inputVariants = {
+//     initial: { opacity: 0, y: 20 },
+//     animate: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } },
+//   };
 
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="w-full lg:w-1/3 bg-gradient-to-b from-white to-gray-50 shadow-2xl rounded-xl p-8"
-      role="form"
-      aria-labelledby="contact-form-title"
-    >
-      <h2 id="contact-form-title" className="text-3xl font-bold text-[#374B5B] mb-6 text-center relative">
-        Get a Quote
-        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-[#FF0600] rounded"></span>
-      </h2>
-      <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6">
-        <motion.div variants={inputVariants}>
-          <label className="block text-sm font-medium text-[#374B5B] mb-2" htmlFor="name">
-            Name *
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleInputChange}
-            className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#FF0600] focus:border-[#FF0600] transition-all duration-300 ease-in-out hover:border-[#FF0600] focus:outline-none bg-gray-50"
-            placeholder="Enter your name"
-            required
-            aria-required="true"
-          />
-        </motion.div>
-        <motion.div variants={inputVariants}>
-          <label className="block text-sm font-medium text-[#374B5B] mb-2" htmlFor="email">
-            Email *
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleInputChange}
-            className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#FF0600] focus:border-[#FF0600] transition-all duration-300 ease-in-out hover:border-[#FF0600] focus:outline-none bg-gray-50"
-            placeholder="Enter your email"
-            required
-            aria-required="true"
-          />
-        </motion.div>
-        <motion.div variants={inputVariants}>
-          <label className="block text-sm font-medium text-[#374B5B] mb-2" htmlFor="subject">
-            Subject *
-          </label>
-          <input
-            type="text"
-            id="subject"
-            name="subject"
-            value={formData.subject}
-            onChange={handleInputChange}
-            className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#FF0600] focus:border-[#FF0600] transition-all duration-300 ease-in-out hover:border-[#FF0600] focus:outline-none bg-gray-50"
-            placeholder="Subject"
-            required
-            aria-required="true"
-          />
-        </motion.div>
-        <motion.div variants={inputVariants}>
-          <label className="block text-sm font-medium text-[#374B5B] mb-2" htmlFor="phone">
-            Phone *
-          </label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            value={formData.phone}
-            onChange={handleInputChange}
-            className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#FF0600] focus:border-[#FF0600] transition-all duration-300 ease-in-out hover:border-[#FF0600] focus:outline-none bg-gray-50"
-            placeholder="Enter your phone"
-            required
-            aria-required="true"
-          />
-        </motion.div>
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <button
-            type="submit"
-            className="w-full bg-[#FF0600] text-white py-4 rounded-xl hover:bg-[#CC0500] transition-colors duration-300 font-semibold shadow-md hover:shadow-glow"
-          >
-            Submit
-          </button>
-        </motion.div>
-      </form>
-    </motion.div>
-  );
-};
+//   return (
+//     <motion.div
+//       initial={{ opacity: 0, y: 50 }}
+//       animate={{ opacity: 1, y: 0 }}
+//       transition={{ duration: 0.6 }}
+//       className="w-full lg:w-1/3 bg-gradient-to-b from-white to-gray-50 shadow-2xl rounded-xl p-8"
+//       role="form"
+//       aria-labelledby="contact-form-title"
+//     >
+//       <h2 id="contact-form-title" className="text-3xl font-bold text-[#374B5B] mb-6 text-center relative">
+//         Get a Quote
+//         <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-[#FF0600] rounded"></span>
+//       </h2>
+//       <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6">
+//         <motion.div variants={inputVariants}>
+//           <label className="block text-sm font-medium text-[#374B5B] mb-2" htmlFor="name">
+//             Name *
+//           </label>
+//           <input
+//             type="text"
+//             id="name"
+//             name="name"
+//             value={formData.name}
+//             onChange={handleInputChange}
+//             className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#FF0600] focus:border-[#FF0600] transition-all duration-300 ease-in-out hover:border-[#FF0600] focus:outline-none bg-gray-50"
+//             placeholder="Enter your name"
+//             required
+//             aria-required="true"
+//           />
+//         </motion.div>
+//         <motion.div variants={inputVariants}>
+//           <label className="block text-sm font-medium text-[#374B5B] mb-2" htmlFor="email">
+//             Email *
+//           </label>
+//           <input
+//             type="email"
+//             id="email"
+//             name="email"
+//             value={formData.email}
+//             onChange={handleInputChange}
+//             className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#FF0600] focus:border-[#FF0600] transition-all duration-300 ease-in-out hover:border-[#FF0600] focus:outline-none bg-gray-50"
+//             placeholder="Enter your email"
+//             required
+//             aria-required="true"
+//           />
+//         </motion.div>
+//         <motion.div variants={inputVariants}>
+//           <label className="block text-sm font-medium text-[#374B5B] mb-2" htmlFor="subject">
+//             Subject *
+//           </label>
+//           <input
+//             type="text"
+//             id="subject"
+//             name="subject"
+//             value={formData.subject}
+//             onChange={handleInputChange}
+//             className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#FF0600] focus:border-[#FF0600] transition-all duration-300 ease-in-out hover:border-[#FF0600] focus:outline-none bg-gray-50"
+//             placeholder="Subject"
+//             required
+//             aria-required="true"
+//           />
+//         </motion.div>
+//         <motion.div variants={inputVariants}>
+//           <label className="block text-sm font-medium text-[#374B5B] mb-2" htmlFor="phone">
+//             Phone *
+//           </label>
+//           <input
+//             type="tel"
+//             id="phone"
+//             name="phone"
+//             value={formData.phone}
+//             onChange={handleInputChange}
+//             className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#FF0600] focus:border-[#FF0600] transition-all duration-300 ease-in-out hover:border-[#FF0600] focus:outline-none bg-gray-50"
+//             placeholder="Enter your phone"
+//             required
+//             aria-required="true"
+//           />
+//         </motion.div>
+//         <motion.div
+//           whileHover={{ scale: 1.05 }}
+//           whileTap={{ scale: 0.95 }}
+//         >
+//           <button
+//             type="submit"
+//             className="w-full bg-[#FF0600] text-white py-4 rounded-xl hover:bg-[#CC0500] transition-colors duration-300 font-semibold shadow-md hover:shadow-glow"
+//           >
+//             Submit
+//           </button>
+//         </motion.div>
+//       </form>
+//     </motion.div>
+//   );
+// };
 
 // Sub-component: Service Item
 const ServiceItem = ({ title, index, isLastInRow }) => {
@@ -152,62 +155,62 @@ const ServiceItem = ({ title, index, isLastInRow }) => {
 };
 
 // Sub-component: Testimonial Slider
-const TestimonialSlider = ({ testimonials }) => {
-  const [current, setCurrent] = useState(0);
+// const TestimonialSlider = ({ testimonials }) => {
+//   const [current, setCurrent] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % testimonials.length);
-    }, 6000);
-    return () => clearInterval(interval);
-  }, [testimonials.length]);
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setCurrent((prev) => (prev + 1) % testimonials.length);
+//     }, 6000);
+//     return () => clearInterval(interval);
+//   }, [testimonials.length]);
 
-  const handleDotClick = (index) => {
-    setCurrent(index);
-  };
+//   const handleDotClick = (index) => {
+//     setCurrent(index);
+//   };
 
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.6 }}
-      className="mb-32"
-    >
-      <h2 className="text-4xl font-semibold text-[#374B5B] mb-8 text-center relative">
-        What Our Clients Say
-        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-[#FF0600] rounded"></span>
-      </h2>
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={current}
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -50 }}
-          transition={{ duration: 0.5 }}
-          className="bg-gradient-to-r from-white to-gray-100 p-10 rounded-xl shadow-lg max-w-3xl mx-auto text-center"
-        >
-          <p className="text-gray-600 italic mb-4 text-lg leading-relaxed">"{testimonials[current].quote}"</p>
-          <p className="text-[#374B5B] font-semibold">{testimonials[current].author}</p>
-        </motion.div>
-      </AnimatePresence>
-      <div className="flex justify-center mt-6 space-x-3">
-        {testimonials.map((_, index) => (
-          <motion.button
-            key={index}
-            onClick={() => handleDotClick(index)}
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.9 }}
-            className={`w-4 h-4 rounded-full ${
-              current === index ? 'bg-[#FF0600] ring-2 ring-[#FF0600]' : 'bg-[#374B5B]/50'
-            } transition-colors duration-300`}
-            aria-label={`Go to testimonial ${index + 1}`}
-            aria-current={current === index}
-          />
-        ))}
-      </div>
-    </motion.div>
-  );
-};
+//   return (
+//     <motion.div
+//       initial={{ opacity: 0 }}
+//       whileInView={{ opacity: 1 }}
+//       transition={{ duration: 0.6 }}
+//       className="mb-32"
+//     >
+//       <h2 className="text-4xl font-semibold text-[#374B5B] mb-8 text-center relative">
+//         What Our Clients Say
+//         <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-[#FF0600] rounded"></span>
+//       </h2>
+//       <AnimatePresence mode="wait">
+//         <motion.div
+//           key={current}
+//           initial={{ opacity: 0, x: 50 }}
+//           animate={{ opacity: 1, x: 0 }}
+//           exit={{ opacity: 0, x: -50 }}
+//           transition={{ duration: 0.5 }}
+//           className="bg-gradient-to-r from-white to-gray-100 p-10 rounded-xl shadow-lg max-w-3xl mx-auto text-center"
+//         >
+//           <p className="text-gray-600 italic mb-4 text-lg leading-relaxed">"{testimonials[current].quote}"</p>
+//           <p className="text-[#374B5B] font-semibold">{testimonials[current].author}</p>
+//         </motion.div>
+//       </AnimatePresence>
+//       <div className="flex justify-center mt-6 space-x-3">
+//         {testimonials.map((_, index) => (
+//           <motion.button
+//             key={index}
+//             onClick={() => handleDotClick(index)}
+//             whileHover={{ scale: 1.2 }}
+//             whileTap={{ scale: 0.9 }}
+//             className={`w-4 h-4 rounded-full ${
+//               current === index ? 'bg-[#FF0600] ring-2 ring-[#FF0600]' : 'bg-[#374B5B]/50'
+//             } transition-colors duration-300`}
+//             aria-label={`Go to testimonial ${index + 1}`}
+//             aria-current={current === index}
+//           />
+//         ))}
+//       </div>
+//     </motion.div>
+//   );
+// };
 
 // Sub-component: Certifications Section
 const CertificationsSection = () => {
@@ -529,39 +532,41 @@ export default function SecurityGuardsLiverpool() {
           </motion.div>
 
           {/* Testimonial Slider */}
-          <TestimonialSlider testimonials={testimonials} />
-
+<TestimonialSlider/>
           {/* Certifications Section */}
           <CertificationsSection />
 
           {/* Call to Action */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-32"
-          >
-            <h2 className="text-4xl font-semibold text-[#374B5B] mb-6 relative">
-              Contact Us
-              <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#FF0600] rounded"></span>
-            </h2>
-            <p className="text-gray-600 mb-6 text-lg leading-relaxed">
-              Call us at{' '}
-              <a href="tel:01612237281" className="text-[#374B5B] hover:text-[#FF0600] hover:underline font-medium">
-                0161 223 7281
-              </a>{' '}
-              or
-            </p>
-            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-              <Link
-                href="/contact"
-                className="inline-block bg-[#FF0600] text-white py-4 px-10 rounded-xl hover:bg-[#CC0500] transition-colors duration-300 font-bold shadow-md hover:shadow-glow text-lg"
-              >
-                Contact Us
-              </Link>
-            </motion.div>
-          </motion.div>
+         <motion.div
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+  className="text-center mb-32"
+>
+  <h2 className="text-4xl font-semibold text-[#374B5B] mb-6 relative">
+    Contact Us
+    <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#FF0600] rounded"></span>
+  </h2>
+  <p className="text-gray-600 mb-6 text-lg leading-relaxed">
+    Call us at{' '}
+    <a href="tel:01612237281" className="text-[#374B5B] hover:text-[#FF0600] hover:underline font-medium">
+      0161 223 7281
+    </a>{' '}
+    or
+  </p>
+  <motion.div >
+    <button
+      onClick={() => {
+        headerRef.current.scrollIntoView({ behavior: 'smooth' });
+        document.documentElement.style.overflowX = 'auto';
+      }}
+      className="inline-block bg-[#FF0600] text-white py-4 px-10 rounded-xl hover:bg-[#CC0500] transition-colors duration-300 font-bold shadow-md hover:shadow-glow text-lg"
+    >
+      Contact Us
+    </button>
+  </motion.div>
+</motion.div>
 
           {/* Sticky CTA Button */}
           <AnimatePresence>
