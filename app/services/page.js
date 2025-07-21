@@ -106,34 +106,36 @@ const ContactForm = ({ formData, handleInputChange, handleSubmit }) => {
 };
 
 // Sub-component: Service Card with Image
-const ServiceCard = ({ title, subtitle, image, index }) => {
+const ServiceCard = ({ title, subtitle, image, index, slug }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      viewport={{ once: true }}
-      className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 group overflow-hidden"
-    >
-      <div className="relative">
-        <img
-          src={image}
-          alt={`${title} service`}
-          className="w-full h-48 object-cover rounded-t-xl group-hover:scale-105 transition-transform duration-300"
-        />
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileHover={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
-          className="absolute inset-0 bg-[#374B5B]/60 flex items-center justify-center rounded-t-xl"
-        >
-          <p className="text-white text-lg font-semibold text-center px-4">{subtitle}</p>
-        </motion.div>
-      </div>
-      <div className="p-6">
-        <h3 className="text-xl font-semibold text-[#374B5B] mb-2 group-hover:text-[#FF0600] transition-colors">{title}</h3>
-      </div>
-    </motion.div>
+    <Link href={`/services/${slug}`}>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+        viewport={{ once: true }}
+        className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 group overflow-hidden cursor-pointer"
+      >
+        <div className="relative">
+          <img
+            src={image}
+            alt={`${title} service`}
+            className="w-full h-48 object-cover rounded-t-xl group-hover:scale-105 transition-transform duration-300"
+          />
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileHover={{ opacity: 1 }}
+            transition={{ duration: 0.3 }}
+            className="absolute inset-0 bg-[#374B5B]/60 flex items-center justify-center rounded-t-xl"
+          >
+            <p className="text-white text-lg font-semibold text-center px-4">{subtitle}</p>
+          </motion.div>
+        </div>
+        <div className="p-6">
+          <h3 className="text-xl font-semibold text-[#374B5B] mb-2 group-hover:text-[#FF0600] transition-colors">{title}</h3>
+        </div>
+      </motion.div>
+    </Link>
   );
 };
 
@@ -403,42 +405,56 @@ export default function Services() {
 
   // Services list with standardized image paths
   const services = [
-    {
-      title: 'Manned Guarding',
-      subtitle: 'MANNED GUARDING',
-      image: '/services/Manned-Guarding.webp',
-    },
-    {
-      title: 'Event Security',
-      subtitle: 'EVENT SECURITY',
-      image: '/services/Event-Security.webp',
-    },
-    {
-      title: 'Key Holding',
-      subtitle: 'KEY HOLDING & ALARM RESPONSE',
-      image: '/services/Key-Holding.webp',
-    },
-    {
-      title: 'Facility Management',
-      subtitle: 'FACILITY MANAGEMENT',
-      image: '/services/Facility-Management.webp',
-    },
-    {
-      title: 'Car Park Management',
-      subtitle: 'CAR PARK MANAGEMENT',
-      image: '/services/CarPark_Management.webp',
-    },
-    {
-      title: 'Concrete Block Hire',
-      subtitle: 'CONCRETE BLOCK HIRE',
-      image: '/services/Concrete_Block-Hire.png',
-    },
-    {
-      title: 'CCTV',
-      subtitle: 'CCTV',
-      image: '/services/CCTV.webp',
-    },
-  ];
+  {
+    title: 'Manned Guarding',
+    subtitle: 'MANNED GUARDING',
+    image: '/services/Manned-Guarding.webp',
+    slug: 'manned-guarding',
+    content: `Our SIA-licensed manned guarding services provide robust protection for commercial, residential, and industrial properties across Manchester, Liverpool, and the North West. Our highly trained security officers deliver a visible deterrent against theft, vandalism, and unauthorized access, ensuring safety 24/7. Equipped with advanced communication tools and real-time reporting systems, our guards respond swiftly to incidents, offering peace of mind to clients. Whether for retail, construction sites, or corporate offices, MAK Security’s manned guarding solutions are tailored to meet your specific needs, backed by our SIA-approved contractor status and ACS Pacesetters membership.`,
+  },
+  {
+    title: 'Event Security',
+    subtitle: 'EVENT SECURITY',
+    image: '/services/Event-Security.webp',
+    slug: 'event-security',
+    content: `MAK Security specializes in delivering comprehensive event security services for concerts, festivals, corporate events, and private functions across the North West. Our SIA-licensed security personnel work closely with event organizers to develop customized security plans, ensuring crowd control, access management, and rapid incident response. With over 50 years of combined industry experience, we minimize risks and create safe, enjoyable environments for attendees. Our proactive approach and attention to detail make us the preferred choice for event security in Manchester and beyond.`,
+  },
+  {
+    title: 'Key Holding',
+    subtitle: 'KEY HOLDING & ALARM RESPONSE',
+    image: '/services/Key-Holding.webp',
+    slug: 'key-holding',
+    content: `Our key holding and alarm response services provide 24/7 protection for residential and commercial properties in Manchester, Liverpool, and the North West. Keys are securely stored in high-security facilities or mobile units, accessible only to our vetted, SIA-licensed officers. In the event of an alarm activation or security breach, our rapid response team arrives promptly to secure your premises, minimizing risks and damage. With a 24-hour manned control room and GPS tracking, MAK Security ensures efficient, reliable service, backed by our SIA-approved status.`,
+  },
+  {
+    title: 'Facility Management',
+    subtitle: 'FACILITY MANAGEMENT',
+    image: '/services/Facility-Management.webp',
+    slug: 'facility-management',
+    content: `MAK Security offers comprehensive facility management services to ensure the smooth operation of commercial and industrial properties. Our services include security integration, access control, and regular patrols, tailored to your facility’s needs. Our SIA-licensed team works seamlessly with property managers to maintain a safe and efficient environment, using advanced technology like CCTV and real-time reporting. With a focus on client satisfaction and operational excellence, MAK Security is your trusted partner for facility management across the North West.`,
+  },
+  {
+    title: 'Car Park Management',
+    subtitle: 'CAR PARK MANAGEMENT',
+    image: '/services/CarPark_Management.webp',
+    slug: 'car-park-management',
+    content: `Our car park management services ensure safe and efficient parking environments for retail centers, offices, and residential complexes in Manchester and the North West. We provide advanced surveillance with AI-powered CCTV, on-site SIA-licensed security personnel, and tailored enforcement strategies to prevent unauthorized parking, theft, and vandalism. Our solutions include parking enforcement, traffic management, and regular patrols, delivering peace of mind to property owners and visitors. MAK Security’s expertise ensures seamless car park operations with a focus on safety and user experience.`,
+  },
+  {
+    title: 'Concrete Block Hire',
+    subtitle: 'CONCRETE BLOCK HIRE',
+    image: '/services/Concrete_Block-Hire.png',
+    slug: 'concrete-block-hire',
+    content: `MAK Security offers concrete block hire services to secure vacant sites, construction areas, and event perimeters across the North West. Our high-quality concrete blocks provide a robust physical barrier to deter unauthorized access and enhance site security. Available for short- or long-term hire, our blocks are installed and maintained by our professional team, ensuring flexibility and reliability. Combined with our manned guarding and CCTV services, MAK Security delivers comprehensive site protection tailored to your needs.`,
+  },
+  {
+    title: 'CCTV',
+    subtitle: 'CCTV',
+    image: '/services/CCTV.webp',
+    slug: 'cctv',
+    content: `Our state-of-the-art CCTV solutions provide 24/7 surveillance for properties across Manchester, Liverpool, and the North West. Featuring AI-assisted cameras capable of distinguishing human intruders from animals, our systems offer high-definition monitoring and real-time alerts. Our SIA-licensed team designs, installs, and maintains CCTV systems tailored to your property’s needs, ensuring maximum coverage and security. With remote access and integration with our 24-hour control room, MAK Security’s CCTV services deliver peace of mind and robust protection.`,
+  },
+];
 
   // Testimonials list
   const testimonials = [
@@ -545,12 +561,13 @@ const certifications = [
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
             {services.map((service, index) => (
               <ServiceCard
-                key={index}
-                title={service.title}
-                subtitle={service.subtitle}
-                image={service.image}
-                index={index}
-              />
+              key={index}
+              title={service.title}
+              subtitle={service.subtitle}
+              image={service.image}
+              index={index}
+              slug={service.slug}
+            />
             ))}
           </div>
         </motion.div>

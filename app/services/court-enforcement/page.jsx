@@ -4,8 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ShieldCheckIcon,
-  BuildingOfficeIcon,
-  ClockIcon,
+  DocumentTextIcon,
   CheckCircleIcon,
 } from "@heroicons/react/24/outline";
 import ContactForm from "@/components/contactus";
@@ -44,7 +43,7 @@ const ServiceItem = ({ service, index }) => {
 };
 
 // Main Component
-export default function FacilityManagement() {
+export default function CourtEnforcement() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -73,57 +72,51 @@ export default function FacilityManagement() {
   }, []);
 
   const services = [
-    "Office Cleaning",
-    "Window Cleaning",
-    "Carpet Cleaning",
-    "Social Housing Cleaning",
-    "Industrial Cleaning",
-    "Drain Cleaning",
-    "Daytime Cleaning",
-    "Jet Washing",
-    "Graffiti Removal",
-    "General Cleaning",
-    "Leisure Cleaning",
-    "Retail Cleaning",
-    "Kitchen Cleaning",
-    "IT Equipment Cleaning",
-    "Washroom Management",
-    "Washroom Hygiene",
-    "Washroom Products",
-    "Property Maintenance",
-    "Grounds Maintenance",
+    "Writ of Control",
+    "Writ of Possession",
+    "Writ of Delivery",
+    "Writ of Assistance",
+    "Writ of Restitution",
+    "Traveller/Gypsy Removal",
+    "Commercial Rent Arrears Recovery",
+    "Forfeiture of Lease",
+    "Squatter Removal",
+    "Residential Evictions",
+    "Horse/Equine Removal",
+    "Protester Removal",
+    "Abandoned Car Removal",
+    "Pre-Legal Services (Tracing, Process Serving, Asset Recovery, Debt Collection, Litigation)",
   ];
 
   const benefits = [
-    "Top-class security services",
-    "Dedicated account managers",
-    "24 Hour Control Room facility",
-    "Latest GPS tracking facility",
-    "Rapid response time",
-    "Same day setup",
-    "Real-time incident reports",
-    "Around the clock service",
+    "Rapid deployment within an hour (traffic and distance dependent)",
+    "Ex-armed forces Enforcement Agents with negotiation expertise",
+    "Common Law evictions for Traveller/Gypsy removal without court proceedings",
+    "Cost-effective and professional enforcement services",
+    "Nationwide coverage in Manchester, Liverpool, London, and beyond",
+    "24/7 dedicated account manager support",
+    "Compliance with SIA and ISO9001 standards",
   ];
 
   const keyFeatures = [
-    "Customisable service - easily modified or upgraded",
-    "Fast mobile support teams with enhanced communications",
-    "Real-time Time & Attendance systems",
-    "Single point of contact throughout",
-    "Locally managed team",
-    "Single invoicing system",
+    "Highly trained ex-armed forces Enforcement Agents",
+    "Prompt resolution through proven negotiation tactics",
+    "Fast and peaceful eviction processes",
+    "Customizable enforcement plans tailored to your needs",
+    "Secure and professional pre-legal services",
+    "Single point of contact for seamless communication",
   ];
 
   const processSteps = [
     {
       title: "1. Site Visit",
       description:
-        "Request a free, no-obligation quotation. We complete a full site survey, risk assessment, and discuss your facility management requirements.",
+        "Request a free, no-obligation quotation. We complete a full site survey, risk assessment, and discuss your court enforcement requirements.",
     },
     {
       title: "2. Service Delivery",
       description:
-        "We provide tailored cleaning, maintenance, or grounds services, with onsite training or deployment for seamless execution.",
+        "Our Enforcement Agents are deployed promptly, with onsite training or systems (e.g., CCTV, patrols) to execute court orders effectively.",
     },
     {
       title: "3. Friendly Support",
@@ -142,7 +135,7 @@ export default function FacilityManagement() {
           transition={{ duration: 0.6 }}
           className="relative min-h-[700px] w-full bg-cover bg-center rounded-3xl shadow-2xl mb-20 overflow-hidden"
           style={{
-            backgroundImage: "url('/services/Facility-Management.jpeg')",
+            backgroundImage: "url('/services/Court-Enforcement.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-red-900/85 to-red-300/60 rounded-3xl"></div>
@@ -154,10 +147,10 @@ export default function FacilityManagement() {
               className="w-full lg:w-1/2 text-white pr-0 lg:pr-12 mb-10 lg:mb-0"
             >
               <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight">
-                Facility Management Services Northwest
+                High Court Enforcement Services Nationwide
               </h1>
               <p className="text-xl text-gray-100 max-w-lg mb-8 leading-relaxed">
-                MAK Security offers comprehensive facility management services in Manchester, Liverpool, and the Northwest, providing tailored cleaning, maintenance, and grounds solutions for commercial properties.
+                MAK Security provides professional and cost-effective court enforcement services across Manchester, Liverpool, London, and nationwide, with ex-armed forces agents ensuring prompt resolutions.[](https://mak-security.co.uk/court-enforcement/)
               </p>
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -174,7 +167,7 @@ export default function FacilityManagement() {
           </div>
         </motion.div>
 
-        {/* Facility Management Description */}
+        {/* Court Enforcement Description */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 -z-10">
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-50 to-white opacity-95"></div>
@@ -189,7 +182,7 @@ export default function FacilityManagement() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-red-700 mb-4">
-                Comprehensive Facility Management Solutions
+                Professional High Court Enforcement Solutions
               </h2>
               <div className="w-24 h-1 bg-red-500 mx-auto"></div>
             </motion.div>
@@ -207,7 +200,7 @@ export default function FacilityManagement() {
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.2 }}
                 >
-                  <span className="text-red-500 font-semibold">Facility management</span> is essential for maintaining high standards in commercial properties. Since 2009, MAK Security has expanded from bespoke security to a one-stop shop for facility management services across Manchester, Liverpool, and the Northwest.
+                  <span className="text-red-500 font-semibold">High Court enforcement</span> requires expertise and efficiency. MAK Security, a leading provider in Manchester, Liverpool, London, and nationwide, offers a professional service with ex-armed forces Enforcement Agents skilled in negotiation tactics for prompt resolutions.[](https://mak-security.co.uk/court-enforcement/)
                 </motion.p>
                 <motion.p
                   className="text-lg text-gray-700 leading-relaxed"
@@ -215,7 +208,7 @@ export default function FacilityManagement() {
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.4 }}
                 >
-                  Our services include office and industrial cleaning, property maintenance (painting, plumbing, electrical), and grounds maintenance (mowing, landscaping), all tailored to your specific needs.
+                  We handle a range of High Court judgments, including Writs of Control, Possession, Delivery, Assistance, and Restitution, as well as specialized services like Traveller/Gypsy removal, squatter evictions, and commercial rent arrears recovery.
                 </motion.p>
                 <motion.p
                   className="text-lg text-gray-700 leading-relaxed"
@@ -223,7 +216,7 @@ export default function FacilityManagement() {
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.6 }}
                 >
-                  With fast mobile support teams, real-time tracking, and a single point of contact, we ensure professional, reliable solutions that enhance your property’s appearance and functionality.
+                  Our team can deploy within an hour (traffic and distance dependent) and offers Common Law evictions for Traveller/Gypsy encampments, avoiding lengthy court proceedings.[](https://mak-security.co.uk/court-enforcement/)
                 </motion.p>
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -232,7 +225,7 @@ export default function FacilityManagement() {
                   className="pt-4"
                 >
                   <button className="px-8 py-3 bg-[#FF0600] text-white rounded-lg font-semibold transition-colors shadow-md hover:shadow-lg">
-                    Request Free Facility Management Assessment
+                    Request Free Court Enforcement Assessment
                   </button>
                 </motion.div>
               </motion.div>
@@ -245,8 +238,8 @@ export default function FacilityManagement() {
               >
                 <div className="relative group rounded-2xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/services/Facility_management-2-400x300.jpg"
-                    alt="Facility management services for commercial properties"
+                    src="/services/Mak_Security_Manchester.jpg"
+                    alt="MAK Security court enforcement agent"
                     width={1200}
                     height={400}
                     className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
@@ -255,8 +248,8 @@ export default function FacilityManagement() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-blue-900/10"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h3 className="text-xl font-bold mb-2">Facility Management</h3>
-                    <p className="text-blue-100">Tailored cleaning and maintenance</p>
+                    <h3 className="text-xl font-bold mb-2">Court Enforcement</h3>
+                    <p className="text-blue-100">Swift and professional resolutions</p>
                   </div>
                   <div className="absolute top-0 right-0 w-16 h-16 border-t-4 border-r-4 border-blue-500"></div>
                 </div>
@@ -282,7 +275,7 @@ export default function FacilityManagement() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-red-700 mb-4">
-                Benefits of MAK Facility Management
+                Benefits of MAK Court Enforcement
               </h2>
               <div className="w-24 h-1 bg-red-500 mx-auto"></div>
             </motion.div>
@@ -314,7 +307,7 @@ export default function FacilityManagement() {
                 transition={{ duration: 0.5 }}
                 className="text-4xl font-bold text-white mb-4"
               >
-                Our Facility Management Services
+                Our Court Enforcement Services
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0 }}
@@ -322,7 +315,7 @@ export default function FacilityManagement() {
                 transition={{ delay: 0.2, duration: 0.6 }}
                 className="text-xl text-blue-100 max-w-3xl mx-auto"
               >
-                MAK Security offers a wide range of cleaning, maintenance, and grounds services tailored to commercial properties across the Northwest.
+                MAK Security offers a comprehensive range of court enforcement services, from High Court judgments to specialized evictions and pre-legal solutions, nationwide.
               </motion.p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -332,44 +325,17 @@ export default function FacilityManagement() {
               >
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mr-4">
-                    <BuildingOfficeIcon className="w-6 h-6 text-white" />
+                    <DocumentTextIcon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">Cleaning Services</h3>
+                  <h3 className="text-xl font-semibold text-white">High Court Judgments</h3>
                 </div>
                 <ul className="space-y-3">
                   {[
-                    "Office Cleaning",
-                    "Window Cleaning",
-                    "Carpet Cleaning",
-                    "Industrial Cleaning",
-                    "Daytime Cleaning",
-                    "Jet Washing",
-                  ].map((service) => (
-                    <li key={service} className="flex items-center">
-                      <CheckCircleIcon className="w-5 h-5 text-blue-300 mr-2" />
-                      <span className="text-blue-100">{service}</span>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-              <motion.div
-                whileHover={{ y: -5 }}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-blue-300 transition-all"
-              >
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mr-4">
-                    <ClockIcon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white">Specialized Cleaning</h3>
-                </div>
-                <ul className="space-y-3">
-                  {[
-                    "Social Housing Cleaning",
-                    "Graffiti Removal",
-                    "Kitchen Cleaning",
-                    "IT Equipment Cleaning",
-                    "Washroom Management",
-                    "Washroom Hygiene",
+                    "Writ of Control",
+                    "Writ of Possession",
+                    "Writ of Delivery",
+                    "Writ of Assistance",
+                    "Writ of Restitution",
                   ].map((service) => (
                     <li key={service} className="flex items-center">
                       <CheckCircleIcon className="w-5 h-5 text-blue-300 mr-2" />
@@ -386,15 +352,39 @@ export default function FacilityManagement() {
                   <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mr-4">
                     <ShieldCheckIcon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">Maintenance Services</h3>
+                  <h3 className="text-xl font-semibold text-white">Property & Land Enforcement</h3>
                 </div>
                 <ul className="space-y-3">
                   {[
-                    "Property Maintenance",
-                    "Grounds Maintenance",
-                    "Painting & Decorating",
-                    "Plumbing & Electrical",
-                    "Workspace Improvement",
+                    "Traveller/Gypsy Removal",
+                    "Squatter Removal",
+                    "Protester Removal",
+                    "Horse/Equine Removal",
+                    "Abandoned Car Removal",
+                  ].map((service) => (
+                    <li key={service} className="flex items-center">
+                      <CheckCircleIcon className="w-5 h-5 text-blue-300 mr-2" />
+                      <span className="text-blue-100">{service}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+              <motion.div
+                whileHover={{ y: -5 }}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-blue-300 transition-all"
+              >
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mr-4">
+                    <DocumentTextIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">Commercial & Pre-Legal Services</h3>
+                </div>
+                <ul className="space-y-3">
+                  {[
+                    "Commercial Rent Arrears Recovery",
+                    "Forfeiture of Lease",
+                    "Residential Evictions",
+                    "Tracing, Process Serving, Debt Collection",
                   ].map((service) => (
                     <li key={service} className="flex items-center">
                       <CheckCircleIcon className="w-5 h-5 text-blue-300 mr-2" />
@@ -411,7 +401,7 @@ export default function FacilityManagement() {
               className="text-center mt-16"
             >
               <button className="px-8 py-3 bg-white text-blue-900 rounded-lg font-semibold hover:bg-blue-100 transition-colors shadow-lg hover:shadow-xl">
-                Request Facility Management Quote
+                Request Court Enforcement Quote
               </button>
             </motion.div>
           </div>
@@ -474,7 +464,7 @@ export default function FacilityManagement() {
                 transition={{ delay: 0.2, duration: 0.6 }}
                 className="text-xl text-blue-100 max-w-3xl mx-auto"
               >
-                MAK Security is your one-stop shop for facility management, combining customizable services with a locally managed team and advanced technology.
+                MAK Security is your trusted partner for court enforcement, with ex-armed forces agents, rapid deployment, and a commitment to professional, peaceful resolutions.[](https://mak-security.co.uk/court-enforcement/)
               </motion.p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -487,12 +477,12 @@ export default function FacilityManagement() {
               >
                 <ul className="space-y-3">
                   {[
-                    "Customizable service tailored to your needs",
-                    "Single point of contact for seamless communication",
-                    "Locally managed team for personalized service",
-                    "Single invoicing system for simplicity",
-                    "SIA approved company since 2009",
-                    "24-hour manned control room with cutting-edge technology",
+                    "Ex-armed forces Enforcement Agents with global experience",
+                    "Rapid deployment within an hour nationwide",
+                    "Common Law evictions for efficient Traveller/Gypsy removal",
+                    "SIA-approved contractor status for Security Guarding",
+                    "24/7 manned control room with real-time reporting",
+                    "Cost-effective pre-legal services like debt collection",
                   ].map((reason, index) => (
                     <li key={index} className="flex items-center">
                       <CheckCircleIcon className="w-5 h-5 text-blue-300 mr-2" />
@@ -519,8 +509,8 @@ export default function FacilityManagement() {
               >
                 <div className="relative group rounded-2xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/services/mak3.jpg"
-                    alt="MAK Security facility management team"
+                    src="/services/Basit-Mak-Security.jpg"
+                    alt="MAK Security court enforcement team"
                     width={400}
                     height={400}
                     className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
@@ -529,7 +519,7 @@ export default function FacilityManagement() {
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-blue-900/10"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                     <h3 className="text-xl font-bold mb-2">Expert Team</h3>
-                    <p className="text-blue-100">Professional facility management</p>
+                    <p className="text-blue-100">Professional court enforcement</p>
                   </div>
                 </div>
               </motion.div>
@@ -547,8 +537,8 @@ export default function FacilityManagement() {
         >
           <div className="absolute inset-0 z-0">
             <Image
-              src="/services/download.jpg"
-              alt="Facility management process"
+              src="/services/images.jpg"
+              alt="Court enforcement process"
               width={1200}
               height={800}
               className="w-full h-full object-cover"
@@ -605,7 +595,7 @@ export default function FacilityManagement() {
                 </div>
                 <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">Tailored Solutions</h2>
                 <p className="text-gray-600 leading-relaxed">
-                  We design bespoke facility management plans based on site surveys to meet your specific needs.
+                  We design bespoke enforcement plans based on site surveys to meet your specific court order needs.
                 </p>
                 <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
                   <svg
@@ -630,7 +620,7 @@ export default function FacilityManagement() {
                 </div>
                 <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">Professional Execution</h2>
                 <p className="text-gray-600 leading-relaxed">
-                  Our skilled team delivers cleaning and maintenance services with precision and minimal disruption.
+                  Our ex-armed forces agents execute court orders with precision and minimal disruption.
                 </p>
                 <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
                   <svg
@@ -655,7 +645,7 @@ export default function FacilityManagement() {
                 </div>
                 <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">Ongoing Support</h2>
                 <p className="text-gray-600 leading-relaxed">
-                  Our dedicated account managers provide 24/7 support to ensure your facility remains in top condition.
+                  Our dedicated account managers provide 24/7 support to ensure your enforcement needs are met.
                 </p>
               </motion.div>
             </div>
@@ -686,18 +676,17 @@ export default function FacilityManagement() {
                 transition={{ delay: 0.2 }}
                 className="text-lg text-gray-600 max-w-3xl mx-auto"
               >
-                MAK Integrated Services holds SIA-approved contractor status for Security Guarding and Key Holding Services.
+                MAK Integrated Services holds SIA-approved contractor status for Security Guarding and Key Holding Services, and is ISO9001 registered.[](https://mak-security.co.uk/court-enforcement/)
                 <span className="block mt-2 text-blue-700 font-medium">ISO Cert No.7971</span>
               </motion.p>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-6 max-w-6xl mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
               {[
                 { name: "ICO", image: "/services/ICO-logo.png" },
                 { name: "SIA", image: "/services/SIA-Logo.png" },
                 { name: "ISOQAR", image: "/services/ISOQAR-Logo.png" },
                 { name: "NASDU", image: "/services/NASDU-logo.png" },
                 { name: "SafeContractor", image: "/services/Safe-Contractor.png" },
-                { name: "LS", image: "/services/LS-Logo.png" },
               ].map((cert, index) => (
                 <motion.div
                   key={index}
