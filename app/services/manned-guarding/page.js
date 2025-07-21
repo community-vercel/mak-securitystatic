@@ -771,7 +771,7 @@ export default function MannedGuarding() {
             >
               <Link
                 href="/contact"
-                className="bg-yellow-500 text-blue-900 py-3 px-6 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 flex items-center"
+                className="bg-[#374B5B] text-white py-3 px-6 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 flex items-center"
               >
                 <svg
                   className="w-6 h-6 mr-2"
