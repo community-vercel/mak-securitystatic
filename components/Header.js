@@ -91,7 +91,8 @@ const navLinks = [
     ],
   },
   { name: 'About Us', href: '/about' },
-  { name: 'News', href: '/news' },
+  
+  { name: 'News', href: '/news-insight' },
   { name: 'Careers', href: '/careers' },
   { name: 'Contact', href: '/contact' },
 ];
