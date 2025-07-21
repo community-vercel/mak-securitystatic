@@ -12,7 +12,7 @@ import './styles.css'; // Adjust the path as needed
 
 const slides = [
   {
-    src: '/Mak_Security_Home.jpg',
+    src: '/Mak_Security_Home.webp',
     alt: 'Professional Security Staff at Site',
     title: 'Trusted Security Solutions for Your Peace of Mind',
     description: 'Providing professional manned guarding, event security, and static guarding.',

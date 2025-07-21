@@ -38,7 +38,8 @@ export default function Footer() {
 
         {/* Column 2: Top Pages */}
         <div>
-          <h4 className="text-lg font-bold mb-3 border-b border-red-600 pb-1">Top Pages</h4>
+          <p className="text-lg font-bold mb-3 border-b border-red-600 pb-1">Top Pages</p>
+
           <ul className="space-y-1 text-sm text-gray-300">
             {[
               "Services",
@@ -65,7 +66,8 @@ export default function Footer() {
 
         {/* Column 3: News/Updates */}
         <div>
-          <h4 className="text-lg font-bold mb-3 border-b border-red-600 pb-1">News/Updates</h4>
+                    <p className="text-lg font-bold mb-3 border-b border-red-600 pb-1">News/Updates</p>
+
 
           {/* Sample update block */}
           <div className="mb-4 flex space-x-3">
