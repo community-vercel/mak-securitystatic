@@ -47,9 +47,8 @@ export default function Hero() {
     enquiry: '',
   });
   const [charCount, setCharCount] = useState(0);
-  const [isClient, setIsClient] = useState(false); // Track client-side rendering
+  const [isClient, setIsClient] = useState(false);
 
-  // Set isClient to true after component mounts on the client
   useEffect(() => {
     setIsClient(true);
   }, []);
@@ -86,7 +85,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative w-full h-[90vh] overflow-hidden">
+    <section className="relative w-full h-[90vh] md:h-screen overflow-hidden">
       {/* Swiper Section */}
       <Swiper
         modules={[Autoplay, Navigation, Pagination]}
@@ -98,7 +97,7 @@ export default function Hero() {
         pagination={{ clickable: true }}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         loop
-        allowTouchMove={isClient ? !document.activeElement?.closest('form') : true} // Only access document on client
+        allowTouchMove={isClient ? !document.activeElement?.closest('form') : true}
         className="w-full h-full"
       >
         {slides.map((slide, idx) => (
@@ -114,17 +113,17 @@ export default function Hero() {
                 onError={() => console.error(`Failed to load image: ${slide.src}`)}
               />
               {/* Overlay */}
-              <div className="absolute inset-0 z-5"></div>
+              <div className="absolute inset-0 bg-black/40 z-5"></div>
               {/* Slide Content */}
-              <div className="absolute inset-0 z-10 max-w-6xl flex flex-col items-center justify-center text-center text-white px-4 md:px-8">
-                <h1 className="text-3xl md:text-5xl font-bold mb-4 drop-shadow-lg px-4 py-2 rounded">
+              <div className="absolute inset-0 z-10 max-w-6xl mx-auto flex flex-col items-center justify-center text-center text-white px-4 sm:px-6 md:px-8">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 drop-shadow-lg px-4 py-2 rounded">
                   {slide.title}
                 </h1>
-                <p className="text-lg md:text-xl mb-6 max-w-2xl drop-shadow-md px-4 py-2 rounded">
+                <p className="text-base sm:text-lg md:text-xl mb-6 max-w-xl drop-shadow-md px-4 py-2 rounded">
                   {slide.description}
                 </p>
                 <Link href={slide.buttonLink}>
-                  <button className="bg-[#ff0600] hover:bg-gray-800 text-white py-2 px-6 rounded-md text-sm font-semibold transition">
+                  <button className="bg-[#ff0600] hover:bg-gray-800 text-white py-2 px-4 sm:px-6 rounded-md text-sm sm:text-base font-semibold transition">
                     {slide.buttonText}
                   </button>
                 </Link>
@@ -135,17 +134,17 @@ export default function Hero() {
       </Swiper>
 
       {/* Quote Form */}
-      <div className="absolute top-12 right-4 md:top-16 md:right-12 z-10 bg-white rounded-lg shadow-2xl w-full max-w-md p-6 text-black">
-        <h2 className="text-xl font-semibold text-center mb-1">Request a Quote</h2>
-        <p className="text-sm text-center italic text-red-600 mb-4">Fill in your information below</p>
+      <div className="absolute top-4 sm:top-8 md:top-16 right-0 left-0 mx-auto md:right-4 md:left-auto w-[90%] max-w-md md:w-[350px] z-20 bg-white rounded-lg shadow-2xl p-4 sm:p-6 mt-12 text-black">
+        <h2 className="text-lg sm:text-xl font-semibold text-center mb-1">Request a Quote</h2>
+        <p className="text-xs sm:text-sm text-center italic text-red-600 mb-4">Fill in your information below</p>
 
         <form className="space-y-3" onSubmit={handleSubmit}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <input
               type="text"
               name="name"
               placeholder="NAME*"
-              className="border px-3 py-2 rounded-md text-sm placeholder-gray-500"
+              className="border px-3 py-2 rounded-md text-sm placeholder-gray-500 w-full"
               value={formData.name}
               onChange={handleInputChange}
               required
@@ -156,7 +155,7 @@ export default function Hero() {
               type="text"
               name="phone"
               placeholder="PHONE NUMBER*"
-              className="border px-3 py-2 rounded-md text-sm placeholder-gray-500"
+              className="border px-3 py-2 rounded-md text-sm placeholder-gray-500 w-full"
               value={formData.phone}
               onChange={handleInputChange}
               required

@@ -81,12 +81,14 @@ const BlogSection = () => {
                   {post.date}
                 </p>
               </div>
-              <Link
-                href={post.link}
-                className="mt-4 inline-block bg-[#ff0600] text-white text-sm font-semibold px-4 py-2 rounded hover:bg-blue-700 transition"
-              >
-                Read More
-              </Link>
+           <Link
+  href={post.link}
+  className="mt-4 inline-block bg-[#ff0600] text-white text-sm font-semibold px-4 py-2 rounded hover:bg-gray-900 transition"
+>
+  Read More
+  <span className="sr-only"> about {post.title}</span>
+</Link>
+
             </div>
           </div>
         ))}
