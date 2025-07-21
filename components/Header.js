@@ -145,7 +145,7 @@ export default function Header() {
                 {link.subLinks && <FaChevronDown className="ml-1 text-xs" />}
               </Link>
               {link.subLinks && (
-                <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 invisible group-hover:visible z-50">
+                <div className="absolute left-0 top-full mt-1 w-48 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-200 ease-in-out z-50">
                   {link.subLinks.map((subLink) => (
                     <div key={subLink.name} className="relative group/sub">
                       <Link
@@ -153,9 +153,10 @@ export default function Header() {
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-600 hover:text-white transition-colors duration-200"
                       >
                         {subLink.name}
+                        {subLink.subServices && <FaChevronDown className="ml-1 inline text-xs" />}
                       </Link>
                       {subLink.subServices && (
-                        <div className="absolute left-full top-0 w-48 bg-white shadow-lg rounded-md opacity-0 group-hover/sub:opacity-100 transition-opacity duration-200 invisible group-hover/sub:visible">
+                        <div className="absolute left-full top-0 w-48 bg-white shadow-lg rounded-md opacity-0 group-hover/sub:opacity-100 group-hover/sub:visible invisible transition-all duration-200 ease-in-out">
                           {subLink.subServices.map((subService) => (
                             <Link
                               key={subService.name}
@@ -177,7 +178,11 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
-          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-gray-800">
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="text-gray-800"
+            aria-label={mobileMenuOpen ? 'Close mobile menu' : 'Open mobile menu'}
+          >
             {mobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
         </div>
