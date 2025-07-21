@@ -38,10 +38,10 @@ export default function Services() {
                 />
               </div>
               <div className="p-5 text-left">
-                <h4 className="font-semibold text-lg text-gray-800 flex items-center gap-2">
+                <h3 className="font-semibold text-lg text-gray-800 flex items-center gap-2">
                   <FaShieldAlt className="text-red-600" />
                   {service.title}
-                </h4>
+                </h3>
               </div>
             </div>
           ))}
