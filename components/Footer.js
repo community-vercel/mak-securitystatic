@@ -40,64 +40,75 @@ export default function Footer() {
         <div>
           <p className="text-lg font-bold mb-3 border-b border-red-600 pb-1">Top Pages</p>
 
-          <ul className="space-y-1 text-sm text-gray-300">
-            {[
-              "Services",
-              "Areas Covered",
-              "Key Holding",
-              "Home Key Holding",
-              "Commercial Key Holding Services",
-              "Key Holding Services Manchester",
-              "Security Manchester",
-              "Manned Guarding",
-              "Security Systems",
-              "Car Park Management",
-              "Facility Management",
-              "Job Vacancies",
-              "Contact Us",
-              "Newsletter",
-            ].map((item, i) => (
-              <li key={i}>
-                <Link href="#" className="hover:text-white transition">{item}</Link>
-              </li>
-            ))}
-          </ul>
+        <ul className="space-y-1 text-sm text-gray-300">
+  {[
+    { name: "Services", href: "/services" },
+    { name: "Areas Covered", href: "/areas-covered" },
+    { name: "Key Holding", href: "/services/key-holding" },
+    { name: "Home Key Holding", href: "/services/home-key-holding-manchester" },
+    { name: "Commercial Key Holding Services", href: "/services/commercial-key-holding-manchester" },
+    { name: "Key Holding Services Manchester", href: "/services/commercial-key-holding-manchester" },
+    { name: "Security Manchester", href: "/services/security-guards-manchester" },
+    { name: "Manned Guarding", href: "/services/manned-guarding" },
+    { name: "Security Systems", href: "/services/event-security" },
+    { name: "Car Park Management", href: "/services/car-park-management" },
+    { name: "Facility Management", href: "/services/facility-management" },
+    { name: "Job Vacancies", href: "/careers" },
+    { name: "Contact Us", href: "/contact" },
+    { name: "Newsletter", href: "/newsletter" },
+  ].map((item, i) => (
+    <li key={i}>
+      <Link href={item.href} className="hover:text-white transition">
+        {item.name}
+      </Link>
+    </li>
+  ))}
+</ul>
+
         </div>
 
         {/* Column 3: News/Updates */}
-        <div>
-                    <p className="text-lg font-bold mb-3 border-b border-red-600 pb-1">News/Updates</p>
+       <div>
+  <p className="text-lg font-bold mb-3 border-b border-red-600 pb-1">News/Updates</p>
 
+  {/* SIA Update */}
+  <Link href="/news-insight/sia-licence-reduction">
+    <div className="mb-4 flex space-x-3 cursor-pointer hover:opacity-90 transition">
+      <Image src="/SIA-Logo.png" alt="SIA Update" width={60} height={60} className="object-cover rounded-sm" />
+      <div>
+        <p className="text-sm font-medium leading-snug">SIA makes a further reduction to the SIA licence fee</p>
+        <p className="text-xs text-gray-400">MARCH 1, 2023</p>
+      </div>
+    </div>
+  </Link>
 
-          {/* Sample update block */}
-          <div className="mb-4 flex space-x-3">
-            <Image src="/SIA-Logo.png" alt="SIA Update" width={60} height={60} className="object-cover rounded-sm" />
-            <div>
-              <p className="text-sm font-medium leading-snug">SIA makes a further reduction to the SIA licence fee</p>
-              <p className="text-xs text-gray-400">MARCH 1, 2023</p>
-            </div>
-          </div>
+  {/* ACS Pacesetters */}
+  <Link href="/news-insight/acs-pacesetters-mak">
+    <div className="mb-4 flex space-x-3 cursor-pointer hover:opacity-90 transition">
+      <Image src="/acs-logo.jpg" alt="ACS" width={60} height={60} className="object-cover rounded-sm" />
+      <div>
+        <p className="text-sm font-medium leading-snug">ACS Pacesetters and Mak Security</p>
+        <p className="text-xs text-gray-400">AUGUST 10, 2022</p>
+      </div>
+    </div>
+  </Link>
 
-          <div className="mb-4 flex space-x-3">
-            <Image src="/acs-logo.jpg" alt="ACS" width={60} height={60} className="object-cover rounded-sm" />
-            <div>
-              <p className="text-sm font-medium leading-snug">ACS Pacesetters and Mak Security</p>
-              <p className="text-xs text-gray-400">AUGUST 10, 2022</p>
-            </div>
-          </div>
+  {/* Car Park Security */}
+  <Link href="/news-insight/car-park-security-manchester">
+    <div className="mb-4 flex space-x-3 cursor-pointer hover:opacity-90 transition">
+      <Image src="/Mak_Contact-60x60.jpg" alt="Car Park" width={60} height={60} className="object-cover rounded-sm" />
+      <div>
+        <p className="text-sm font-medium leading-snug">Car Park Security Manchester</p>
+        <p className="text-xs text-gray-400">SEPTEMBER 8, 2020</p>
+      </div>
+    </div>
+  </Link>
 
-          <div className="mb-4 flex space-x-3">
-            <Image src="/Mak_Contact-60x60.jpg" alt="Car Park" width={60} height={60} className="object-cover rounded-sm" />
-            <div>
-              <p className="text-sm font-medium leading-snug">Car Park Security Manchester</p>
-              <p className="text-xs text-gray-400">SEPTEMBER 8, 2020</p>
-            </div>
-          </div>
+  <button className="bg-red-600 text-white px-4 py-2 w-full font-bold mt-2 hover:bg-red-700 transition">
+    JOIN OUR NEWSLETTER
+  </button>
+</div>
 
-          <button className="bg-red-600 text-white px-4 py-2 w-full font-bold mt-2 hover:bg-red-700 transition">
-            JOIN OUR NEWSLETTER
-          </button>
-        </div>
       </div>
 
       {/* Bottom Strip */}

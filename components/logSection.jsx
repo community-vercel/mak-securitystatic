@@ -14,7 +14,7 @@ const blogPosts = [
     image: '/Manned-Guarding.jpg',
     author: 'James Carter',
     date: 'July 10, 2025',
-    link: '/blog/manned-guarding-services',
+    link: '/news-insight/security-guards-manchester',
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const blogPosts = [
     image: '/CCTV.jpg',
     author: 'Sarah Mitchell',
     date: 'June 15, 2025',
-    link: '/blog/cctv-business-security',
+    link: '/news-insight/car-park-security-manchester',
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const blogPosts = [
     image: '/Event-Security.jpg',
     author: 'James Carter',
     date: 'May 25, 2025',
-    link: '/blog/event-security-solutions',
+    link: '/news-insight/event-security-manchester',
   },
 ];
 

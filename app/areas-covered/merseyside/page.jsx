@@ -144,7 +144,7 @@ export default function SecurityServicesMerseyside() {
           className="relative min-h-[400px] md:min-h-[500px] w-full mb-12 rounded-3xl shadow-2xl overflow-hidden"
         >
           <Image
-            src="/services/merseyside-security.jpg"
+            src="/services/Key_Holding_Security.jpg"
             alt="Security Services in Merseyside"
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
@@ -176,7 +176,7 @@ export default function SecurityServicesMerseyside() {
               Expert Security Solutions in Merseyside
             </h2>
             <div className="w-24 h-1 bg-red-600 mx-auto"></div>
-            <p className="text-base md:text-lg text-gray-600 mt-4 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg text-gray-900 mt-4 max-w-3xl mx-auto leading-relaxed">
               MAK Security, based in Audenshaw, Manchester, delivers comprehensive security services across Merseyside, including manned guarding, CCTV, key holding, event security, and concrete block hire.
             </p>
           </motion.div>

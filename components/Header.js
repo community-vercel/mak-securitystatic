@@ -107,13 +107,15 @@ const navLinks = [
     name: 'Areas Covered',
     href: '/areas-covered',
     subLinks: [
+     
+
+
       { name: 'Manchester', href: '/areas-covered/manchester' },
-      { name: 'Liverpool', href: '/areas-covered/liverpool' },
-      { name: 'Salford', href: '/areas-covered/salford' },
-      { name: 'Bolton', href: '/areas-covered/bolton' },
-      { name: 'Preston', href: '/areas-covered/preston' },
-      { name: 'Warrington', href: '/areas-covered/warrington' },
-      { name: 'Chester', href: '/areas-covered/chester' },
+      { name: 'Mersey Side', href: '/areas-covered/merseyside' },
+      { name: 'Lanashire', href: '/areas-covered/lancashire' },
+      { name: 'Cheshire', href: '/areas-covered/cheshire' },
+      { name: 'Staffordshire', href: '/areas-covered/staffordshire' },
+  
     ],
   },
   { name: 'About Us', href: '/about' },
