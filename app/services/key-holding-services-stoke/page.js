@@ -133,7 +133,8 @@ export default function KeyHoldingServicesManchester() {
               className="w-full lg:w-1/2 text-white pr-0 lg:pr-12 mb-10 lg:mb-0"
             >
               <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight">
-                Safe and Secure Key Holding Services Manchester
+                Safe and Secure Key Holding Key Holding Services Stoke
+
               </h1>
               <p className="text-xl text-gray-100 max-w-lg mb-8 leading-relaxed">
                 MAK Security offers excellent key holding services for properties across Greater Manchester and the North West.
@@ -493,7 +494,7 @@ export default function KeyHoldingServicesManchester() {
               transition={{ delay: 0.6 }}
               className="text-center mt-8"
             >
-              <a href="/contact" className="px-8 py-3 bg-white text-blue-900 rounded-lg font-semibold hover:bg-blue-100 transition-colors shadow-lg hover:shadow-xl">
+              <a href="/services" className="px-8 py-3 bg-white text-blue-900 rounded-lg font-semibold hover:bg-blue-100 transition-colors shadow-lg hover:shadow-xl">
                 Find Out More
               </a>
             </motion.div>
