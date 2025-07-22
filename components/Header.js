@@ -16,18 +16,15 @@ const navLinks = [
         name: 'Manned Guarding',
         href: '/services/manned-guarding',
         subServices: [
-          { name: 'Static Guarding', href: '/services/manned-guarding/static-guarding' },
-          { name: 'Retail Security', href: '/services/manned-guarding/retail-security' },
-          { name: 'Corporate Security', href: '/services/manned-guarding/corporate-security' },
+          { name: 'Security Guards Manchester', href: '/services/security-guards-manchester' },
         ],
       },
       {
         name: 'Event Security',
         href: '/services/event-security',
         subServices: [
-          { name: 'Crowd Control', href: '/services/event-security/crowd-control' },
-          { name: 'VIP Protection', href: '/services/event-security/vip-protection' },
-          { name: 'Event Access Management', href: '/services/event-security/access-management' },
+          { name: 'Event Security Manchester', href: '/services/event-security-manchester' },
+         
         ],
       },
       {

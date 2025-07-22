@@ -89,35 +89,35 @@ export default function AreasCoveredPage() {
       href: '/areas-covered/manchester',
       description: 'Comprehensive security solutions across Manchester, including manned guarding, CCTV, key holding, and court enforcement for areas like Blackley, Hulme, and Wythenshawe.',
       subAreas: 'Blackley, Cheetham Hill, Chorlton-cum-Hardy, Didsbury, Hulme, Moss Side, Wythenshawe, Longsight',
-      image: '/services/manchester.jpg', // Static image path
+      image: '/services/Manchester.jpg', // Static image path
     },
     {
       name: 'Merseyside',
       href: '/areas-covered/merseyside',
       description: 'Comprehensive security for Merseyside, including Liverpool, Halton, Knowsley, Sefton, and Wirral, with event security and court enforcement.',
       subAreas: 'Liverpool, Halton, Knowsley, Sefton, Wirral, Wallasey, Heswall',
-      image: '/services/merseyside.jpg', // Static image path
+      image: '/services/Merseyside.jpg', // Static image path
     },
     {
       name: 'Lancashire',
       href: '/areas-covered/lancashire',
       description: 'Offering a full range of security solutions in Lancashire, including Blackburn, Blackpool, Burnley, and Chorley, with mobile patrols and CCTV.',
       subAreas: 'Blackburn, Blackpool, Burnley, Chorley, Lancaster, Ormskirk',
-      image: '/services/lancashire.jpg', // Static image path
+      image: '/services/Lancashire.jpg', // Static image path
     },
     {
       name: 'Cheshire',
       href: '/areas-covered/cheshire',
       description: 'Delivering advanced CCTV, facility management, and court enforcement solutions for businesses in Cheshire, covering areas like Chester, Warrington, and Crewe.',
       subAreas: 'Chester, Warrington, Crewe, Macclesfield, Nantwich',
-      image: '/services/cheshire.jpg', // Static image path
+      image: '/services/Cheshire.jpg', // Static image path
     },
     {
       name: 'Staffordshire',
       href: '/areas-covered/staffordshire',
       description: 'Providing professional security services, including manned guarding and mobile patrols, across Staffordshire, covering areas like Stafford, Stoke-on-Trent, and Lichfield.',
       subAreas: 'Stafford, Stoke-on-Trent, Lichfield, Tamworth, Cannock',
-      image: '/services/staffordshire.jpg', // Static image path
+      image: '/services/Staffordshire.jpg', // Static image path
     },
   ];
 
