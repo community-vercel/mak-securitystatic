@@ -8,7 +8,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Link from 'next/link';
-import './styles.css'; // Adjust the path as needed
+import './styles.css'; 
+
 
 const slides = [
   {
