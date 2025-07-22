@@ -59,7 +59,7 @@ const SubAreaCard = ({ subArea, index }) => (
   </Card>
 );
 
-export default function SecurityServicesManchester() {
+export default function SecurityServicesMerseyside() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -88,10 +88,9 @@ export default function SecurityServicesManchester() {
   }, []);
 
   const services = [
-    'Security Guards',
+    'Manned Guarding',
     'Key Holding & Alarm Response',
     'CCTV Installation & Monitoring',
-    'Commercial Key Holding',
     'Event Security',
     'Facility Management',
     'Car Park Management',
@@ -100,22 +99,17 @@ export default function SecurityServicesManchester() {
   ];
 
   const subAreas = [
-    { name: 'Bury', postcode: 'BL9 0AH', areas: 'Prestwich, Radcliffe, Ramsbottom, Tottington, Whitefield' },
-    { name: 'Bolton', postcode: 'BL1 2AX', areas: 'Blackrod, Farnworth, Horwich, Kearsley, Little Lever, South Turton, Westhoughton' },
-    { name: 'Manchester', postcode: 'M4 1AZ', areas: 'Blackley, Cheetham Hill, Chorlton-cum-Hardy, Didsbury, Fallowfield, Hulme, Moss Side, Newton Heath, Northenden, Ringway, Rusholme, Withington, Wythenshawe, Longsight' },
-    { name: 'Oldham', postcode: 'OL1 3BB', areas: 'Chadderton, Shaw and Crompton, Failsworth, Lees, Royton, Saddleworth' },
-    { name: 'Rochdale', postcode: 'OL11 1EX', areas: 'Heywood, Littleborough, Middleton, Milnrow, Newhey, Wardle' },
-    { name: 'Salford', postcode: 'M6 5JA', areas: 'Swinton, Eccles, Walkden, Worsley, Salford, Irlam, Ordsall, Pendlebury, Cadishead' },
-    { name: 'Stockport', postcode: 'SK1 3SS', areas: 'Bramhall, Bredbury, Cheadle, Gatley, Hazel Grove, Heaton Chapel, Heaton Mersey, Heaton Moor, Heaton Norris, Marple, Marple Bridge, Mellor, Reddish, Romiley' },
-    { name: 'Tameside', postcode: 'OL6 7AP', areas: 'Ashton-under-Lyne, Audenshaw, Broadbottom, Denton, Droylsden, Dukinfield, Hattersley, Hollingworth, Hyde, Longdendale, Mossley, Mottram-in-Longdendale, Stalybridge' },
-    { name: 'Trafford', postcode: 'M17 1QR', areas: 'Stretford, Altrincham, Bowdon, Hale, Old Trafford, Sale, Timperley, Urmston' },
-    { name: 'Wigan', postcode: 'WN1 1QH', areas: 'Abram, Ashton-in-Makerfield, Aspull, Astley, Atherton, Bryn, Golborne, Higher End, Hindley, Ince-in-Makerfield, Leigh, Orrell, Standish-with-Langtree, Shevington, Tyldesley, Winstanley' },
+    { name: 'Liverpool', postcode: 'L1 0AA', areas: 'Anfield, Everton, Kirkdale, Vauxhall, Walton' },
+    { name: 'Wirral', postcode: 'CH41 2XX', areas: 'Birkenhead, Wallasey, Bebington, Heswall, West Kirby' },
+    { name: 'Sefton', postcode: 'PR8 1AA', areas: 'Southport, Bootle, Crosby, Formby, Maghull' },
+    { name: 'Knowsley', postcode: 'L34 1PJ', areas: 'Huyton, Kirkby, Prescot, Halewood, Whiston' },
+    { name: 'St Helens', postcode: 'WA10 1UA', areas: 'Haydock, Newton-le-Willows, Rainford, Billinge, Eccleston' },
   ];
 
   const processSteps = [
     {
       title: '1. Site Visit',
-      description: 'Request a free, no-obligation quotation. We complete a full site survey, risk assessment, and discuss your security requirements tailored to Manchester.',
+      description: 'Request a free, no-obligation quotation. We complete a full site survey, risk assessment, and discuss your security requirements tailored to Merseyside.',
     },
     {
       title: '2. Service Delivery',
@@ -123,7 +117,7 @@ export default function SecurityServicesManchester() {
     },
     {
       title: '3. Friendly Support',
-      description: 'A dedicated account manager is assigned to you, available 24/7 to ensure ongoing satisfaction and support across Manchester.',
+      description: 'A dedicated account manager is assigned to you, available 24/7 to ensure ongoing satisfaction and support across Merseyside.',
     },
   ];
 
@@ -135,11 +129,11 @@ export default function SecurityServicesManchester() {
           <Link href="/" className="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500">
             Home
           </Link>{' '}
-          &gt;{' '}
+         &gt;{' '}
           <Link href="/areas-covered" className="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500">
             Areas Covered
           </Link>{' '}
-          &gt; <span>Manchester</span>
+         &gt; <span>Merseyside</span>
         </nav>
 
         {/* Hero Section */}
@@ -150,8 +144,8 @@ export default function SecurityServicesManchester() {
           className="relative min-h-[400px] md:min-h-[500px] w-full mb-12 rounded-3xl shadow-2xl overflow-hidden"
         >
           <Image
-            src="/services/images.jpg"
-            alt="Security Services in Manchester"
+            src="/services/merseyside-security.jpg"
+            alt="Security Services in Merseyside"
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
             className="object-cover"
@@ -160,16 +154,14 @@ export default function SecurityServicesManchester() {
           <div className="absolute inset-0 bg-gradient-to-r from-red-900/85 to-red-300/60 flex items-center justify-center">
             <div className="text-center text-white px-4">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 drop-shadow-lg leading-tight">
-                Security Services Manchester
+                Merseyside Security Services
               </h1>
               <p className="text-lg md:text-xl max-w-3xl mx-auto drop-shadow-md leading-relaxed">
-                Expert commercial and domestic security solutions across Manchester, with SIA-approved services from our Audenshaw office.
+                Expert commercial and domestic security solutions across Merseyside, with SIA-approved services from our Audenshaw, Manchester office.
               </p>
             </div>
           </div>
         </motion.div>
-
-   
 
         {/* Services Overview */}
         <section className="py-12 sm:py-16">
@@ -181,11 +173,11 @@ export default function SecurityServicesManchester() {
             className="text-center mb-12"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
-              Expert Security Solutions in Manchester
+              Expert Security Solutions in Merseyside
             </h2>
             <div className="w-24 h-1 bg-red-600 mx-auto"></div>
             <p className="text-base md:text-lg text-gray-600 mt-4 max-w-3xl mx-auto leading-relaxed">
-              MAK Security, based in Audenshaw, Manchester, delivers comprehensive security services, including manned guarding, CCTV, key holding, and concrete block hire, across Greater Manchester and the North West.
+              MAK Security, based in Audenshaw, Manchester, delivers comprehensive security services across Merseyside, including manned guarding, CCTV, key holding, event security, and concrete block hire.
             </p>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10">
@@ -197,95 +189,94 @@ export default function SecurityServicesManchester() {
 
         {/* Why Choose MAK Security */}
         <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="relative py-20 bg-[#374B5B]"
+        >
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute top-0 left-0 w-32 h-32 bg-blue-800 rounded-full filter blur-3xl opacity-20"></div>
+            <div className="absolute bottom-0 right-0 w-64 h-64 bg-blue-600 rounded-full filter blur-3xl opacity-10"></div>
+          </div>
+          <div className="container mx-auto px-4 relative">
+            <div className="text-center mb-16">
+              <motion.h2
+                initial={{ y: 20 }}
+                whileInView={{ y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="text-4xl font-bold text-white mb-4"
+              >
+                Why Choose MAK Security?
+              </motion.h2>
+              <motion.p
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+                className="text-xl text-blue-100 max-w-3xl mx-auto"
+              >
+                MAK Security is one of the most established security companies in Merseyside, offering SIA-approved services with over 50 years of security industry experience and 30 years with Greater Manchester Police.
+              </motion.p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="relative py-20 bg-[#374B5B]"
+                className="space-y-6"
               >
-                <div className="absolute inset-0 overflow-hidden">
-                  <div className="absolute top-0 left-0 w-32 h-32 bg-blue-800 rounded-full filter blur-3xl opacity-20"></div>
-                  <div className="absolute bottom-0 right-0 w-64 h-64 bg-blue-600 rounded-full filter blur-3xl opacity-10"></div>
-                </div>
-                <div className="container mx-auto px-4 relative">
-                  <div className="text-center mb-16">
-                    <motion.h2
-                      initial={{ y: 20 }}
-                      whileInView={{ y: 0 }}
-                      transition={{ duration: 0.5 }}
-                      className="text-4xl font-bold text-white mb-4"
-                    >
-                      Why Choose MAK Security?
-                    </motion.h2>
-                    <motion.p
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      transition={{ delay: 0.2, duration: 0.6 }}
-                      className="text-xl text-blue-100 max-w-3xl mx-auto"
-                    >
-                      MAK Security is your trusted partner for concrete block hire and manned guarding, with SIA-approved officers and a management team with over 30 years of Greater Manchester Police experience.
-                    </motion.p>
-                  </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <motion.div
-                      initial={{ opacity: 0, x: -50 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.6 }}
-                      viewport={{ once: true }}
-                      className="space-y-6"
-                    >
-                      <ul className="space-y-3">
-                        {[
-                          "SIA-approved contractor since 2009",
-                          "Management with 30+ years of police experience",
-                          "Nationwide delivery from Manchester, Liverpool, Birmingham",
-                          "24/7 manned control room with GPS tracking",
-                          "Flexible concrete block and security solutions",
-                          "Rapid response for court enforcement and evictions",
-                        ].map((reason, index) => (
-                          <li key={index} className="flex items-center">
-                            <CheckCircleIcon className="w-5 h-5 text-blue-300 mr-2" />
-                            <span className="text-blue-100">{reason}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      <motion.div
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ delay: 0.4 }}
-                      >
-                        <button className="px-8 py-3 bg-white text-gray-900 rounded-lg font-semibold hover:bg-blue-100 transition-colors shadow-lg hover:shadow-xl">
-                          Learn More About Us
-                        </button>
-                      </motion.div>
-                    </motion.div>
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.6 }}
-                      viewport={{ once: true }}
-                      className="flex justify-center"
-                    >
-                      <div className="relative group rounded-2xl overflow-hidden shadow-2xl">
-                        <Image
-                          src="/services/Supervisor-security.jpg"
-                          alt="MAK Security concrete block hire team"
-                          width={400}
-                          height={400}
-                          className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-                          style={{ minHeight: "400px" }}
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 to-gray-900/10"></div>
-                        <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                          <h3 className="text-xl font-bold mb-2">Expert Team</h3>
-                          <p className="text-blue-100">Professional security solutions</p>
-                        </div>
-                      </div>
-                    </motion.div>
+                <ul className="space-y-3">
+                  {[
+                    'SIA-approved contractor since 2009',
+                    'Management with 30+ years of police experience',
+                    'Nationwide delivery from Manchester, Liverpool, Birmingham',
+                    '24/7 manned control room with GPS tracking',
+                    'Pre-start shift check calls and real-time incident reports',
+                    'Rapid response for court enforcement and evictions',
+                  ].map((reason, index) => (
+                    <li key={index} className="flex items-center">
+                      <CheckCircleIcon className="w-5 h-5 text-blue-300 mr-2" />
+                      <span className="text-blue-100">{reason}</span>
+                    </li>
+                  ))}
+                </ul>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: 0.4 }}
+                >
+                  <button className="px-8 py-3 bg-white text-gray-900 rounded-lg font-semibold hover:bg-blue-100 transition-colors shadow-lg hover:shadow-xl">
+                    Learn More About Us
+                  </button>
+                </motion.div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="flex justify-center"
+              >
+                <div className="relative group rounded-2xl overflow-hidden shadow-2xl">
+                  <Image
+                    src="/services/Supervisor-security.jpg"
+                    alt="MAK Security team in Merseyside"
+                    width={400}
+                    height={400}
+                    className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                    style={{ minHeight: '400px' }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 to-gray-900/10"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <h3 className="text-xl font-bold mb-2">Expert Team</h3>
+                    <p className="text-blue-100">Professional security solutions</p>
                   </div>
                 </div>
               </motion.div>
-      
+            </div>
+          </div>
+        </motion.div>
 
         {/* Sub-Areas Section */}
         <section className="py-12 sm:py-16">
@@ -297,11 +288,11 @@ export default function SecurityServicesManchester() {
             className="text-center mb-12"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
-              Areas We Cover Around Manchester
+              Areas We Cover Around Merseyside
             </h2>
             <div className="w-24 h-1 bg-red-600 mx-auto"></div>
             <p className="text-base md:text-lg text-gray-600 mt-4 max-w-3xl mx-auto leading-relaxed">
-              We provide comprehensive security services across Greater Manchester, including Bury, Bolton, Oldham, Rochdale, Salford, Stockport, Tameside, Trafford, and Wigan.
+              We provide comprehensive security services across Merseyside, including Liverpool, Wirral, Sefton, Knowsley, and St Helens, ensuring a safe and secure environment.
             </p>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10">
@@ -312,46 +303,46 @@ export default function SecurityServicesManchester() {
         </section>
 
         {/* Service Process */}
-   <motion.div
-           initial={{ opacity: 0 }}
-           whileInView={{ opacity: 1 }}
-           transition={{ duration: 0.6 }}
-           viewport={{ once: true }}
-           className="relative py-20 mb-20 overflow-hidden"
-         >
-           <div className="absolute inset-0 z-0">
-             <Image
-               src="/services/Concrete_Block_Hire.jpg"
-               alt="Concrete block hire process"
-               width={1200}
-               height={800}
-               className="w-full h-full object-cover"
-             />
-             <div className="absolute inset-0 bg-black/30"></div>
-           </div>
-           <div className="relative z-10">
-             <h2 className="text-4xl font-bold text-white mb-12 text-center">Our Process</h2>
-             <div className="relative">
-               <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-white/30 transform -translate-y-1/2"></div>
-               <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-red-500 transform -translate-y-1/2 animate-connector"></div>
-               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-5">
-                 {processSteps.map((step, index) => (
-                   <div key={index} className="relative">
-                     <ProcessCard
-                       title={step.title}
-                       description={step.description}
-                       index={index}
-                       className="relative z-10 bg-white/90 backdrop-blur-sm"
-                     />
-                     {index < processSteps.length - 1 && (
-                       <div className="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-blue-500 border-4 border-white z-20"></div>
-                     )}
-                   </div>
-                 ))}
-               </div>
-             </div>
-           </div>
-         </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="relative py-20 mb-20 overflow-hidden"
+        >
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/services/Concrete_Block_Hire.jpg"
+              alt="Concrete block hire process"
+              width={1200}
+              height={800}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/30"></div>
+          </div>
+          <div className="relative z-10">
+            <h2 className="text-4xl font-bold text-white mb-12 text-center">Our Process</h2>
+            <div className="relative">
+              <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-white/30 transform -translate-y-1/2"></div>
+              <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-red-500 transform -translate-y-1/2 animate-connector"></div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-5">
+                {processSteps.map((step, index) => (
+                  <div key={index} className="relative">
+                    <ProcessCard
+                      title={step.title}
+                      description={step.description}
+                      index={index}
+                      className="relative z-10 bg-white/90 backdrop-blur-sm"
+                    />
+                    {index < processSteps.length - 1 && (
+                      <div className="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-blue-500 border-4 border-white z-20"></div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </motion.div>
 
         {/* Testimonial Slider */}
         <section className="py-12 sm:py-16">
@@ -406,11 +397,12 @@ export default function SecurityServicesManchester() {
                 transition={{ delay: 0.2 }}
                 className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed"
               >
-                MAK Integrated Services holds SIA-approved contractor status for Security Guarding and Key Holding Services, and is ISO9001 registered.
-                <span className="block mt-2 text-red-500 font-medium">ISO Cert No. 7971</span>
+                MAK Integrated Services holds SIA-approved contractor status for Security Guarding and Key Holding Services, and is ISO900 {
+                  <span className="block mt-2 text-red-500 font-medium">ISO Cert No. 7971</span>
+                }
               </motion.p>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 max-w-7xl mx-auto">
               {[
                 { name: 'ICO', image: '/services/ICO-logo.png' },
                 { name: 'SIA', image: '/services/SIA-Logo.png' },
@@ -452,7 +444,7 @@ export default function SecurityServicesManchester() {
           viewport={{ once: true }}
           className="text-center py-12 sm:py-16 bg-red-600 text-white"
         >
-          <h3 className="text-2xl md:text-3xl font-semibold mb-2">Secure Manchester Today</h3>
+          <h3 className="text-2xl md:text-3xl font-semibold mb-2">Secure Merseyside Today</h3>
           <p className="text-3xl md:text-4xl font-bold mb-4">0161 223 7281</p>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link
