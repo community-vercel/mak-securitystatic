@@ -20,6 +20,41 @@ const navLinks = [
         ],
       },
       {
+        name: 'Security Guards',
+        href: '/services/security-guards',
+        subServices: [
+          { name: 'Security Guards Manchester', href: '/services/security-guards-manchester' },
+          { name: 'Security Guards Liverpool', href: '/services/security-guards-liverpool' },
+
+        ],
+      },
+      {
+        name: 'Key Holding Services',
+        href: '/services/key-holding',
+        subServices: [
+          { name: 'KEY HOLDING SECURITY MANCHESTER', href: '/services/key-holding-security-manchester' },
+          { name: 'COMMERCIAL KEY HOLDING MANCHESTER', href: '/services/commercial-key-holding-manchester' },
+          { name: 'KEY HOLDING SERVICES LIVERPOOL', href: '/services/key-holding-services-liverpool' },
+          { name: 'KEY HOLDING SERVICES MANCHESTER', href: '/services/key-holding-services-manchester' },
+          { name: 'KEY HOLDING SERVICES STOKE', href: '/services/key-holding-services-stoke' },
+          { name: 'COMMERCIAL KEY HOLDING', href: '/services/commercial-key-holding' },
+          { name: 'HOME KEY HOLDING MANCHESTER', href: '/services/home-key-holding-manchester' },
+
+
+
+
+        ],
+      },
+      {
+        name: 'CCTV Security',
+        href: '/services/cctv',
+        // subServices: [
+        //   { name: 'AI-Powered CCTV', href: '/services/cctv/ai-powered' },
+        //   { name: 'Remote Monitoring', href: '/services/cctv/remote-monitoring' },
+        //   { name: ' CCTV Installation', href: '/services/cctv/installation' },
+        // ],
+      },
+      {
         name: 'Event Security',
         href: '/services/event-security',
         subServices: [
@@ -28,49 +63,43 @@ const navLinks = [
         ],
       },
       {
-        name: 'Key Holding',
-        href: '/services/key-holding',
+        name: 'Mobile Security',
+        href: '#',
         subServices: [
-          { name: 'Alarm Response', href: '/services/key-holding/alarm-response' },
-          { name: 'Key Storage', href: '/services/key-holding/key-storage' },
-          { name: 'Lock/Unlock Services', href: '/services/key-holding/lock-unlock' },
+          { name: 'MOBILE SECURITY MANCHESTER', href: '/services/mobile-security-manchester' },
+          { name: 'MOBILE SECURITY STOCKPORT', href: '/services/mobile-security-stockport' },
+          { name: 'MOBILE SECURITY OLDHAM', href: '/services/mobile-security-oldham' },
+          { name: 'MOBILE SECURITY BOLTON', href: '/services/mobile-security-bolton' },
+          { name: 'MOBILE SECURITY AINTREE', href: '/services/mobile-security-aintree' },
+          { name: 'MOBILE SECURITY BIRKENHEAD', href: '/services/mobile-security-birkenhead' },
+          { name: 'MOBILE SECURITY KNOWSLEY', href: '/services/mobile-security-knowsley' },
+          { name: 'MOBILE SECURITY LIVERPOOL', href: '/services/mobile-security-liverpool' },
+
+
+
         ],
       },
+      
       {
         name: 'Facility Management',
         href: '/services/facility-management',
-        subServices: [
-          { name: 'Access Control', href: '/services/facility-management/access-control' },
-          { name: 'Building Patrols', href: '/services/facility-management/building-patrols' },
-          { name: 'Security Audits', href: '/services/facility-management/security-audits' },
-        ],
+       
       },
       {
         name: 'Car Park Management',
         href: '/services/car-park-management',
-        subServices: [
-          { name: 'Parking Enforcement', href: '/services/car-park-management/parking-enforcement' },
-          { name: 'Traffic Management', href: '/services/car-park-management/traffic-management' },
-          { name: 'CCTV Surveillance', href: '/services/car-park-management/cctv-surveillance' },
-        ],
+        
       },
+      
       {
         name: 'Concrete Block Hire',
         href: '/services/concrete-block-hire',
-        subServices: [
-          { name: 'Site Security Blocks', href: '/services/concrete-block-hire/site-security' },
-          { name: 'Event Perimeter Blocks', href: '/services/concrete-block-hire/event-perimeter' },
-          { name: 'Temporary Barriers', href: '/services/concrete-block-hire/temporary-barriers' },
-        ],
+
       },
-      {
-        name: 'CCTV',
-        href: '/services/cctv',
-        subServices: [
-          { name: 'AI-Powered CCTV', href: '/services/cctv/ai-powered' },
-          { name: 'Remote Monitoring', href: '/services/cctv/remote-monitoring' },
-          { name: 'CCTV Installation', href: '/services/cctv/installation' },
-        ],
+       {
+        name: 'Court Enforcement',
+        href: '/services/court-enforcement',
+        
       },
     ],
   },
