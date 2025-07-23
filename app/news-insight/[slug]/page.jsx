@@ -122,7 +122,7 @@ export default function NewsDetailPage() {
         </div>
 
         <div className="mt-10">
-          <Link href="/news" className="text-red-600 hover:underline">
+          <Link href="/news-insight" className="text-red-600 hover:underline">
             ← Back to News
           </Link>
         </div>
