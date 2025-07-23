@@ -24,7 +24,7 @@ const newsData = [
     title: 'Car Park Security Manchester',
     date: 'March 29, 2023',
     content: `MAK Security offers comprehensive car park security and management services across Manchester, addressing both car park management and parking enforcement needs. Our services include advanced surveillance systems, such as CCTV with AI capabilities to distinguish human intruders from animals, on-site SIA-licensed security personnel, and tailored enforcement strategies to ensure safe and efficient parking environments. Whether for commercial properties, retail centers, or residential complexes, our team provides round-the-clock monitoring and rapid response to incidents, minimizing risks such as theft, vandalism, or unauthorized parking. We utilize state-of-the-art technology and highly trained officers to deliver peace of mind to property owners and visitors alike. Our holistic approach to car park security, combined with our experience in facility management, ensures seamless operations and enhances the overall user experience in Manchester and surrounding areas.`,
-    image: '/news/Mak_Contact-270x310.jpg',
+    image: '/news/Manned-Guarding.jpg',
   },
   {
     slug: 'key-holding-response',
@@ -38,7 +38,7 @@ const newsData = [
     title: 'Event Security Manchester',
     date: 'March 10, 2023',
     content: `MAK Security specializes in delivering top-tier event security services in Manchester, ensuring safe and enjoyable experiences for all attendees. We work closely with event organizers to develop customized security plans that address specific risks and requirements, including crowd control, access management, and incident response. Our SIA-licensed security personnel are trained to manage large crowds, prevent unauthorized access, and respond swiftly to any incidents, ensuring minimal disruption. From corporate events to large public gatherings, our proactive approach and attention to detail create a secure environment, allowing organizers and guests to focus on the event itself. With over 50 years of combined experience in the security industry, MAK Security is a preferred choice for event security in Manchester, delivering professional and effective services tailored to each client’s needs.`,
-    image: '/news/Manned_Guards-270x310.jpg',
+    image: '/news/Manne.jpg',
   },
   {
     slug: 'key-holding-services-manchester',

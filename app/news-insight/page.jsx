@@ -23,7 +23,7 @@ const newsData = [
     title: 'Car Park Security Manchester',
     date: 'March 29, 2023',
     excerpt: 'Whether your interest is car park management or parking enforcement we have a host of quality products and services to help. We cover every aspect of car park security Manchester and it\'s continual management including car park...',
-    image: '/news/Mak_Contact-270x310.jpg',
+    image: '/news/Mak_Security_Manchester.jpg',
     slug: 'car-park-security-manchester',
   },
   {
@@ -51,21 +51,21 @@ const newsData = [
     title: 'Security Guards Manchester',
     date: 'February 24, 2023',
     excerpt: '24/7 Guarding Services. Damage sustained due to burglary or vandalism can have a significant financial and emotional impact. We provide trained, reliable guards to prevent such issues.',
-    image: '/news/Security-Guard-270x310.jpg',
+    image: '/news/Security-Guard.jpg',
     slug: 'security-guards-manchester',
   },
   {
     title: 'Guidance On Hiring Staff To Manage Social Distancing Queues',
     date: 'February 15, 2023',
     excerpt: 'Many retailers are seeking assistance to manage queues outside their premises amid the COVID-19 pandemic. We provide reliable staff and guidance for social distancing enforcement.',
-    image: '/news/Corona-Virus-270x310.jpg',
+    image: '/news/Corona-Virus.jpg',
     slug: 'hiring-staff-social-distancing',
   },
   {
     title: 'Corona Virus And SIA Security Personnel',
     date: 'February 01, 2023',
     excerpt: 'Boris Johnson gave a speech directed at the British public with further instructions on what measures need to be taken to combat the spread of the COVID-19 Corona Virus.',
-    image: '/news/Corona-Virus-270x310.jpg',
+    image: '/news/Covid-19-1-270x310.jpg',
     slug: 'corona-virus-security-personnel',
   },
   {
