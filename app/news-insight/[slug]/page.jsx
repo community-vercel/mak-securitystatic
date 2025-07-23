@@ -38,14 +38,14 @@ const newsData = [
     title: 'Event Security Manchester',
     date: 'March 10, 2023',
     content: `MAK Security specializes in delivering top-tier event security services in Manchester, ensuring safe and enjoyable experiences for all attendees. We work closely with event organizers to develop customized security plans that address specific risks and requirements, including crowd control, access management, and incident response. Our SIA-licensed security personnel are trained to manage large crowds, prevent unauthorized access, and respond swiftly to any incidents, ensuring minimal disruption. From corporate events to large public gatherings, our proactive approach and attention to detail create a secure environment, allowing organizers and guests to focus on the event itself. With over 50 years of combined experience in the security industry, MAK Security is a preferred choice for event security in Manchester, delivering professional and effective services tailored to each client’s needs.`,
-    image: '/news/Manne.jpg',
+    image: '/news/Security-Guard.jpg',
   },
   {
     slug: 'key-holding-services-manchester',
     title: 'Key Holding Services Greater Manchester',
     date: 'March 01, 2023',
     content: `MAK Security offers reliable key holding services across Greater Manchester, catering to both domestic and commercial clients. Our secure key holding solutions ensure that your property’s keys are stored in a high-security facility or mobile unit, accessible only to our trained, SIA-licensed officers. In the event of an emergency, such as an alarm activation or security issue, our rapid response team arrives promptly to secure your premises, dealing with all types of alarm systems and emergency incidents. This service provides peace of mind for property owners, eliminating the need to personally respond to incidents. With a 24-hour control room, GPS tracking, and real-time incident reporting, MAK Security ensures efficient and professional key holding services tailored to your needs, backed by our SIA-approved contractor status.`,
-    image: '/news/Key_Holding_Security-270x310.jpg',
+    image: '/news/Key-Holding.jpg',
   },
   {
     slug: 'security-guards-manchester',

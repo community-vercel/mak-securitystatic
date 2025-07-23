@@ -44,7 +44,7 @@ const newsData = [
     title: 'Key Holding Services Greater Manchester',
     date: 'March 01, 2023',
     excerpt: 'MAK Security provides reliable key holding services Manchester for domestic and commercial clients. Our trained and vetted officers arrive promptly ensuring the safety of your property.',
-    image: '/news/Key_Holding_Security-270x310.jpg',
+    image: '/news/Key-Holding.jpg',
     slug: 'key-holding-services-manchester',
   },
   {
